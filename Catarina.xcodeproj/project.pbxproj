@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0117EA552305C68C00E125D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0117EA542305C68C00E125D5 /* GoogleService-Info.plist */; };
+		231500B5BC00B77E72948A49 /* Pods_CatarinaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F87034C0FF097D219F54A866 /* Pods_CatarinaUITests.framework */; };
+		571A1898BFF3B486D40C0662 /* Pods_CatarinaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1233A37A595774CDF1357FC6 /* Pods_CatarinaTests.framework */; };
+		719F1C8CEF34448DA7E4C7BE /* Pods_Catarina.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401DC89698A4251D47A84ACE /* Pods_Catarina.framework */; };
 		CD994FB323059CF4006E9814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD994FB223059CF4006E9814 /* AppDelegate.swift */; };
 		CD994FB523059CF4006E9814 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD994FB423059CF4006E9814 /* ViewController.swift */; };
 		CD994FB823059CF4006E9814 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD994FB623059CF4006E9814 /* Main.storyboard */; };
@@ -35,6 +39,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0117EA542305C68C00E125D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		048F27E2D0A930F8ACBC48F0 /* Pods-Catarina.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catarina.release.xcconfig"; path = "Target Support Files/Pods-Catarina/Pods-Catarina.release.xcconfig"; sourceTree = "<group>"; };
+		1233A37A595774CDF1357FC6 /* Pods_CatarinaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatarinaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		401DC89698A4251D47A84ACE /* Pods_Catarina.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Catarina.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		90E39FC8AB94CD00EEA471AD /* Pods-Catarina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catarina.debug.xcconfig"; path = "Target Support Files/Pods-Catarina/Pods-Catarina.debug.xcconfig"; sourceTree = "<group>"; };
+		994D34E429B5AF51336D4DAF /* Pods-CatarinaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatarinaTests.debug.xcconfig"; path = "Target Support Files/Pods-CatarinaTests/Pods-CatarinaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A6CCADC59982CB345B8EF7BB /* Pods-CatarinaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatarinaTests.release.xcconfig"; path = "Target Support Files/Pods-CatarinaTests/Pods-CatarinaTests.release.xcconfig"; sourceTree = "<group>"; };
+		AF4605A91DBC9FDC55ABF1E9 /* Pods-CatarinaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatarinaUITests.release.xcconfig"; path = "Target Support Files/Pods-CatarinaUITests/Pods-CatarinaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C3BCC47CF79A3C8A852B9745 /* Pods-CatarinaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatarinaUITests.debug.xcconfig"; path = "Target Support Files/Pods-CatarinaUITests/Pods-CatarinaUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD994FAF23059CF4006E9814 /* Catarina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catarina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD994FB223059CF4006E9814 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD994FB423059CF4006E9814 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +62,7 @@
 		CD994FD123059CF8006E9814 /* CatarinaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatarinaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD994FD523059CF8006E9814 /* CatarinaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatarinaUITests.swift; sourceTree = "<group>"; };
 		CD994FD723059CF8006E9814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F87034C0FF097D219F54A866 /* Pods_CatarinaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatarinaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				719F1C8CEF34448DA7E4C7BE /* Pods_Catarina.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				571A1898BFF3B486D40C0662 /* Pods_CatarinaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +86,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				231500B5BC00B77E72948A49 /* Pods_CatarinaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		29DB91CDC9609A6FB976CEF6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90E39FC8AB94CD00EEA471AD /* Pods-Catarina.debug.xcconfig */,
+				048F27E2D0A930F8ACBC48F0 /* Pods-Catarina.release.xcconfig */,
+				994D34E429B5AF51336D4DAF /* Pods-CatarinaTests.debug.xcconfig */,
+				A6CCADC59982CB345B8EF7BB /* Pods-CatarinaTests.release.xcconfig */,
+				C3BCC47CF79A3C8A852B9745 /* Pods-CatarinaUITests.debug.xcconfig */,
+				AF4605A91DBC9FDC55ABF1E9 /* Pods-CatarinaUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7EFF4B1DF494BF1E55300431 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				401DC89698A4251D47A84ACE /* Pods_Catarina.framework */,
+				1233A37A595774CDF1357FC6 /* Pods_CatarinaTests.framework */,
+				F87034C0FF097D219F54A866 /* Pods_CatarinaUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CD994FA623059CF4006E9814 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +123,8 @@
 				CD994FC923059CF8006E9814 /* CatarinaTests */,
 				CD994FD423059CF8006E9814 /* CatarinaUITests */,
 				CD994FB023059CF4006E9814 /* Products */,
+				29DB91CDC9609A6FB976CEF6 /* Pods */,
+				7EFF4B1DF494BF1E55300431 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +147,7 @@
 				CD994FBC23059CF8006E9814 /* Assets.xcassets */,
 				CD994FBE23059CF8006E9814 /* LaunchScreen.storyboard */,
 				CD994FC123059CF8006E9814 /* Info.plist */,
+				0117EA542305C68C00E125D5 /* GoogleService-Info.plist */,
 				CD994FB923059CF4006E9814 /* Catarina.xcdatamodeld */,
 			);
 			path = Catarina;
@@ -135,9 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD994FDA23059CF8006E9814 /* Build configuration list for PBXNativeTarget "Catarina" */;
 			buildPhases = (
+				B02428C068DBB4ABC5D2068D /* [CP] Check Pods Manifest.lock */,
 				CD994FAB23059CF4006E9814 /* Sources */,
 				CD994FAC23059CF4006E9814 /* Frameworks */,
 				CD994FAD23059CF4006E9814 /* Resources */,
+				71BB2B299526F55787DE6245 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +197,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD994FDD23059CF8006E9814 /* Build configuration list for PBXNativeTarget "CatarinaTests" */;
 			buildPhases = (
+				C28BD6065B4D4655FE344C25 /* [CP] Check Pods Manifest.lock */,
 				CD994FC223059CF8006E9814 /* Sources */,
 				CD994FC323059CF8006E9814 /* Frameworks */,
 				CD994FC423059CF8006E9814 /* Resources */,
@@ -170,6 +216,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CD994FE023059CF8006E9814 /* Build configuration list for PBXNativeTarget "CatarinaUITests" */;
 			buildPhases = (
+				A93EEF03C4A6BD4B11BFBF19 /* [CP] Check Pods Manifest.lock */,
 				CD994FCD23059CF8006E9814 /* Sources */,
 				CD994FCE23059CF8006E9814 /* Frameworks */,
 				CD994FCF23059CF8006E9814 /* Resources */,
@@ -233,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD994FC023059CF8006E9814 /* LaunchScreen.storyboard in Resources */,
+				0117EA552305C68C00E125D5 /* GoogleService-Info.plist in Resources */,
 				CD994FBD23059CF8006E9814 /* Assets.xcassets in Resources */,
 				CD994FB823059CF4006E9814 /* Main.storyboard in Resources */,
 			);
@@ -253,6 +301,92 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		71BB2B299526F55787DE6245 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Catarina/Pods-Catarina-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Catarina/Pods-Catarina-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Catarina/Pods-Catarina-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A93EEF03C4A6BD4B11BFBF19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CatarinaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B02428C068DBB4ABC5D2068D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Catarina-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C28BD6065B4D4655FE344C25 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CatarinaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CD994FAB23059CF4006E9814 /* Sources */ = {
@@ -434,11 +568,13 @@
 		};
 		CD994FDB23059CF8006E9814 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90E39FC8AB94CD00EEA471AD /* Pods-Catarina.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ADP5XER6GT;
+				DEVELOPMENT_TEAM = MK55QVZ894;
 				INFOPLIST_FILE = Catarina/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,11 +588,13 @@
 		};
 		CD994FDC23059CF8006E9814 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 048F27E2D0A930F8ACBC48F0 /* Pods-Catarina.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ADP5XER6GT;
+				DEVELOPMENT_TEAM = MK55QVZ894;
 				INFOPLIST_FILE = Catarina/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -470,6 +608,7 @@
 		};
 		CD994FDE23059CF8006E9814 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 994D34E429B5AF51336D4DAF /* Pods-CatarinaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,6 +630,7 @@
 		};
 		CD994FDF23059CF8006E9814 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6CCADC59982CB345B8EF7BB /* Pods-CatarinaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +652,7 @@
 		};
 		CD994FE123059CF8006E9814 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3BCC47CF79A3C8A852B9745 /* Pods-CatarinaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +673,7 @@
 		};
 		CD994FE223059CF8006E9814 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF4605A91DBC9FDC55ABF1E9 /* Pods-CatarinaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

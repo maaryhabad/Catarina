@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import Firebase
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,7 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        FirebaseApp.configure()
+        Auth.auth().signInAnonymously() { (authResult, error) in
+            let user = authResult?.user
+            let isAnonymous = user?.isAnonymous  // true
+            let uid = user?.uid
+            print("ID \(uid)")
+        }
         return true
     }
 
