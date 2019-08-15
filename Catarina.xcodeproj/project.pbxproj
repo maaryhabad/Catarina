@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD994FB323059CF4006E9814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD994FB223059CF4006E9814 /* AppDelegate.swift */; };
+		CD994FB523059CF4006E9814 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD994FB423059CF4006E9814 /* ViewController.swift */; };
+		CD994FB823059CF4006E9814 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD994FB623059CF4006E9814 /* Main.storyboard */; };
+		CD994FBB23059CF4006E9814 /* Catarina.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD994FB923059CF4006E9814 /* Catarina.xcdatamodeld */; };
+		CD994FBD23059CF8006E9814 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD994FBC23059CF8006E9814 /* Assets.xcassets */; };
+		CD994FC023059CF8006E9814 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD994FBE23059CF8006E9814 /* LaunchScreen.storyboard */; };
+		CD994FCB23059CF8006E9814 /* CatarinaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD994FCA23059CF8006E9814 /* CatarinaTests.swift */; };
+		CD994FD623059CF8006E9814 /* CatarinaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD994FD523059CF8006E9814 /* CatarinaUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD994FC723059CF8006E9814 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD994FA723059CF4006E9814 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD994FAE23059CF4006E9814;
+			remoteInfo = Catarina;
+		};
+		CD994FD223059CF8006E9814 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD994FA723059CF4006E9814 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD994FAE23059CF4006E9814;
+			remoteInfo = Catarina;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CD994FAF23059CF4006E9814 /* Catarina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catarina.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD994FB223059CF4006E9814 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CD994FB423059CF4006E9814 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CD994FB723059CF4006E9814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD994FBA23059CF4006E9814 /* Catarina.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Catarina.xcdatamodel; sourceTree = "<group>"; };
+		CD994FBC23059CF8006E9814 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD994FBF23059CF8006E9814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD994FC123059CF8006E9814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD994FC623059CF8006E9814 /* CatarinaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatarinaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD994FCA23059CF8006E9814 /* CatarinaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatarinaTests.swift; sourceTree = "<group>"; };
+		CD994FCC23059CF8006E9814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD994FD123059CF8006E9814 /* CatarinaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatarinaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD994FD523059CF8006E9814 /* CatarinaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatarinaUITests.swift; sourceTree = "<group>"; };
+		CD994FD723059CF8006E9814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD994FAC23059CF4006E9814 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD994FC323059CF8006E9814 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD994FCE23059CF8006E9814 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD994FA623059CF4006E9814 = {
+			isa = PBXGroup;
+			children = (
+				CD994FB123059CF4006E9814 /* Catarina */,
+				CD994FC923059CF8006E9814 /* CatarinaTests */,
+				CD994FD423059CF8006E9814 /* CatarinaUITests */,
+				CD994FB023059CF4006E9814 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD994FB023059CF4006E9814 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD994FAF23059CF4006E9814 /* Catarina.app */,
+				CD994FC623059CF8006E9814 /* CatarinaTests.xctest */,
+				CD994FD123059CF8006E9814 /* CatarinaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD994FB123059CF4006E9814 /* Catarina */ = {
+			isa = PBXGroup;
+			children = (
+				CD994FB223059CF4006E9814 /* AppDelegate.swift */,
+				CD994FB423059CF4006E9814 /* ViewController.swift */,
+				CD994FB623059CF4006E9814 /* Main.storyboard */,
+				CD994FBC23059CF8006E9814 /* Assets.xcassets */,
+				CD994FBE23059CF8006E9814 /* LaunchScreen.storyboard */,
+				CD994FC123059CF8006E9814 /* Info.plist */,
+				CD994FB923059CF4006E9814 /* Catarina.xcdatamodeld */,
+			);
+			path = Catarina;
+			sourceTree = "<group>";
+		};
+		CD994FC923059CF8006E9814 /* CatarinaTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD994FCA23059CF8006E9814 /* CatarinaTests.swift */,
+				CD994FCC23059CF8006E9814 /* Info.plist */,
+			);
+			path = CatarinaTests;
+			sourceTree = "<group>";
+		};
+		CD994FD423059CF8006E9814 /* CatarinaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD994FD523059CF8006E9814 /* CatarinaUITests.swift */,
+				CD994FD723059CF8006E9814 /* Info.plist */,
+			);
+			path = CatarinaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD994FAE23059CF4006E9814 /* Catarina */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD994FDA23059CF8006E9814 /* Build configuration list for PBXNativeTarget "Catarina" */;
+			buildPhases = (
+				CD994FAB23059CF4006E9814 /* Sources */,
+				CD994FAC23059CF4006E9814 /* Frameworks */,
+				CD994FAD23059CF4006E9814 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Catarina;
+			productName = Catarina;
+			productReference = CD994FAF23059CF4006E9814 /* Catarina.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD994FC523059CF8006E9814 /* CatarinaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD994FDD23059CF8006E9814 /* Build configuration list for PBXNativeTarget "CatarinaTests" */;
+			buildPhases = (
+				CD994FC223059CF8006E9814 /* Sources */,
+				CD994FC323059CF8006E9814 /* Frameworks */,
+				CD994FC423059CF8006E9814 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD994FC823059CF8006E9814 /* PBXTargetDependency */,
+			);
+			name = CatarinaTests;
+			productName = CatarinaTests;
+			productReference = CD994FC623059CF8006E9814 /* CatarinaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CD994FD023059CF8006E9814 /* CatarinaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD994FE023059CF8006E9814 /* Build configuration list for PBXNativeTarget "CatarinaUITests" */;
+			buildPhases = (
+				CD994FCD23059CF8006E9814 /* Sources */,
+				CD994FCE23059CF8006E9814 /* Frameworks */,
+				CD994FCF23059CF8006E9814 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD994FD323059CF8006E9814 /* PBXTargetDependency */,
+			);
+			name = CatarinaUITests;
+			productName = CatarinaUITests;
+			productReference = CD994FD123059CF8006E9814 /* CatarinaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD994FA723059CF4006E9814 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Mariana Beilune Abad";
+				TargetAttributes = {
+					CD994FAE23059CF4006E9814 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					CD994FC523059CF8006E9814 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = CD994FAE23059CF4006E9814;
+					};
+					CD994FD023059CF8006E9814 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = CD994FAE23059CF4006E9814;
+					};
+				};
+			};
+			buildConfigurationList = CD994FAA23059CF4006E9814 /* Build configuration list for PBXProject "Catarina" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD994FA623059CF4006E9814;
+			productRefGroup = CD994FB023059CF4006E9814 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD994FAE23059CF4006E9814 /* Catarina */,
+				CD994FC523059CF8006E9814 /* CatarinaTests */,
+				CD994FD023059CF8006E9814 /* CatarinaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD994FAD23059CF4006E9814 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD994FC023059CF8006E9814 /* LaunchScreen.storyboard in Resources */,
+				CD994FBD23059CF8006E9814 /* Assets.xcassets in Resources */,
+				CD994FB823059CF4006E9814 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD994FC423059CF8006E9814 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD994FCF23059CF8006E9814 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD994FAB23059CF4006E9814 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD994FB523059CF4006E9814 /* ViewController.swift in Sources */,
+				CD994FB323059CF4006E9814 /* AppDelegate.swift in Sources */,
+				CD994FBB23059CF4006E9814 /* Catarina.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD994FC223059CF8006E9814 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD994FCB23059CF8006E9814 /* CatarinaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD994FCD23059CF8006E9814 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD994FD623059CF8006E9814 /* CatarinaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD994FC823059CF8006E9814 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD994FAE23059CF4006E9814 /* Catarina */;
+			targetProxy = CD994FC723059CF8006E9814 /* PBXContainerItemProxy */;
+		};
+		CD994FD323059CF8006E9814 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD994FAE23059CF4006E9814 /* Catarina */;
+			targetProxy = CD994FD223059CF8006E9814 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD994FB623059CF4006E9814 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD994FB723059CF4006E9814 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CD994FBE23059CF8006E9814 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD994FBF23059CF8006E9814 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD994FD823059CF8006E9814 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CD994FD923059CF8006E9814 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD994FDB23059CF8006E9814 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ADP5XER6GT;
+				INFOPLIST_FILE = Catarina/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mariabad.Catarina;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD994FDC23059CF8006E9814 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ADP5XER6GT;
+				INFOPLIST_FILE = Catarina/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mariabad.Catarina;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CD994FDE23059CF8006E9814 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ADP5XER6GT;
+				INFOPLIST_FILE = CatarinaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mariabad.CatarinaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Catarina.app/Catarina";
+			};
+			name = Debug;
+		};
+		CD994FDF23059CF8006E9814 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ADP5XER6GT;
+				INFOPLIST_FILE = CatarinaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mariabad.CatarinaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Catarina.app/Catarina";
+			};
+			name = Release;
+		};
+		CD994FE123059CF8006E9814 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ADP5XER6GT;
+				INFOPLIST_FILE = CatarinaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mariabad.CatarinaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Catarina;
+			};
+			name = Debug;
+		};
+		CD994FE223059CF8006E9814 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ADP5XER6GT;
+				INFOPLIST_FILE = CatarinaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mariabad.CatarinaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Catarina;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD994FAA23059CF4006E9814 /* Build configuration list for PBXProject "Catarina" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD994FD823059CF8006E9814 /* Debug */,
+				CD994FD923059CF8006E9814 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD994FDA23059CF8006E9814 /* Build configuration list for PBXNativeTarget "Catarina" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD994FDB23059CF8006E9814 /* Debug */,
+				CD994FDC23059CF8006E9814 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD994FDD23059CF8006E9814 /* Build configuration list for PBXNativeTarget "CatarinaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD994FDE23059CF8006E9814 /* Debug */,
+				CD994FDF23059CF8006E9814 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD994FE023059CF8006E9814 /* Build configuration list for PBXNativeTarget "CatarinaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD994FE123059CF8006E9814 /* Debug */,
+				CD994FE223059CF8006E9814 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CD994FB923059CF4006E9814 /* Catarina.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CD994FBA23059CF4006E9814 /* Catarina.xcdatamodel */,
+			);
+			currentVersion = CD994FBA23059CF4006E9814 /* Catarina.xcdatamodel */;
+			path = Catarina.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CD994FA723059CF4006E9814 /* Project object */;
+}
