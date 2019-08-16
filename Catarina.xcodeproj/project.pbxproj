@@ -11,6 +11,7 @@
 		231500B5BC00B77E72948A49 /* Pods_CatarinaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F87034C0FF097D219F54A866 /* Pods_CatarinaUITests.framework */; };
 		571A1898BFF3B486D40C0662 /* Pods_CatarinaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1233A37A595774CDF1357FC6 /* Pods_CatarinaTests.framework */; };
 		719F1C8CEF34448DA7E4C7BE /* Pods_Catarina.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401DC89698A4251D47A84ACE /* Pods_Catarina.framework */; };
+		CD719B2B2306EE9600E027CB /* RotinaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD719B2A2306EE9600E027CB /* RotinaViewController.swift */; };
 		CD994FB323059CF4006E9814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD994FB223059CF4006E9814 /* AppDelegate.swift */; };
 		CD994FB523059CF4006E9814 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD994FB423059CF4006E9814 /* ViewController.swift */; };
 		CD994FB823059CF4006E9814 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD994FB623059CF4006E9814 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		A6CCADC59982CB345B8EF7BB /* Pods-CatarinaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatarinaTests.release.xcconfig"; path = "Target Support Files/Pods-CatarinaTests/Pods-CatarinaTests.release.xcconfig"; sourceTree = "<group>"; };
 		AF4605A91DBC9FDC55ABF1E9 /* Pods-CatarinaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatarinaUITests.release.xcconfig"; path = "Target Support Files/Pods-CatarinaUITests/Pods-CatarinaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C3BCC47CF79A3C8A852B9745 /* Pods-CatarinaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatarinaUITests.debug.xcconfig"; path = "Target Support Files/Pods-CatarinaUITests/Pods-CatarinaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CD719B2A2306EE9600E027CB /* RotinaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotinaViewController.swift; sourceTree = "<group>"; };
 		CD994FAF23059CF4006E9814 /* Catarina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catarina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD994FB223059CF4006E9814 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD994FB423059CF4006E9814 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				CD994FC123059CF8006E9814 /* Info.plist */,
 				0117EA542305C68C00E125D5 /* GoogleService-Info.plist */,
 				CD994FB923059CF4006E9814 /* Catarina.xcdatamodeld */,
+				CD719B2A2306EE9600E027CB /* RotinaViewController.swift */,
 			);
 			path = Catarina;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD994FB523059CF4006E9814 /* ViewController.swift in Sources */,
+				CD719B2B2306EE9600E027CB /* RotinaViewController.swift in Sources */,
 				CD994FB323059CF4006E9814 /* AppDelegate.swift in Sources */,
 				CD994FBB23059CF4006E9814 /* Catarina.xcdatamodeld in Sources */,
 			);
