@@ -7,11 +7,18 @@
 //
 
 import UIKit
-//import Firebase
+
+
+struct cellData {
+    var aberto = Bool()
+    var titulo = String()
+    var sectionData = [String]()
+}
+
 
 class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate {
     
-    // MARK: - Outlets
+    var tableViewData = [cellData]()
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -20,31 +27,47 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        // Do any additional setup after loading the view.
+        tableViewData = [cellData(aberto: false, titulo: "O titulo fica aqui", sectionData:               ["String1","String2"]),
+                         cellData(aberto: false, titulo: "O titulo fica aqui", sectionData: ["String1","String2","String3"])]
     }
     
-    // MARK: - TableView
-
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return tableViewData.count
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        if tableViewData[section].aberto ==  true{
+            return tableViewData[section].sectionData.count
+        }else{
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        if indexPath.row == 0{
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else{ return UITableViewCell()}
+            cell.textLabel?.text = tableViewData[indexPath.section].titulo
+            return cell
+        }else{
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {return UITableViewCell()}
+            cell.textLabel?.text = tableViewData[indexPath.section].sectionData[indexPath.row]
+            return cell
+        }
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0{
+            if tableViewData[indexPath.section].aberto == true{
+                tableViewData[indexPath.section].aberto = false
+                let sections = IndexSet.init(integer: indexPath.section)
+                tableView.reloadSections(sections, with: .none )//anim
+                
+            }else{
+                tableViewData[indexPath.section].aberto  = true
+                let sections = IndexSet.init(integer: indexPath.section)
+                tableView.reloadSections(sections, with: .none)//anim
+            }
+        }
     }
     
-    // MARK: - Actions
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
