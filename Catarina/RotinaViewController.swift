@@ -23,6 +23,13 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var tableView: UITableView!
     
     
+    @IBAction func addButton(_ sender: Any) {
+        let addOverPopUp = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addPopUpID") as! AddPopUpViewController
+        self.addChild(addOverPopUp)
+       addOverPopUp.view.frame = self.view.frame
+        self.view.addSubview(addOverPopUp.view)
+        addOverPopUp.didMove(toParent: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self

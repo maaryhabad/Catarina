@@ -21,6 +21,7 @@
 		CD994FC023059CF8006E9814 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD994FBE23059CF8006E9814 /* LaunchScreen.storyboard */; };
 		CD994FCB23059CF8006E9814 /* CatarinaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD994FCA23059CF8006E9814 /* CatarinaTests.swift */; };
 		CD994FD623059CF8006E9814 /* CatarinaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD994FD523059CF8006E9814 /* CatarinaUITests.swift */; };
+		FBE07579230ACB5C0012DDF6 /* AddPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE07578230ACB5C0012DDF6 /* AddPopUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		CD994FD523059CF8006E9814 /* CatarinaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatarinaUITests.swift; sourceTree = "<group>"; };
 		CD994FD723059CF8006E9814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F87034C0FF097D219F54A866 /* Pods_CatarinaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatarinaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBE07578230ACB5C0012DDF6 /* AddPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPopUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				CD994FB423059CF4006E9814 /* ViewController.swift */,
 				CD719B2C2306F36600E027CB /* Familia.storyboard */,
 				CD994FB623059CF4006E9814 /* Main.storyboard */,
+				FBE07578230ACB5C0012DDF6 /* AddPopUpViewController.swift */,
 				CD994FBC23059CF8006E9814 /* Assets.xcassets */,
 				CD994FBE23059CF8006E9814 /* LaunchScreen.storyboard */,
 				CD994FC123059CF8006E9814 /* Info.plist */,
@@ -403,6 +406,7 @@
 				CD994FB523059CF4006E9814 /* ViewController.swift in Sources */,
 				CD719B2B2306EE9600E027CB /* RotinaViewController.swift in Sources */,
 				CD994FB323059CF4006E9814 /* AppDelegate.swift in Sources */,
+				FBE07579230ACB5C0012DDF6 /* AddPopUpViewController.swift in Sources */,
 				CD994FBB23059CF4006E9814 /* Catarina.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -580,7 +584,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MK55QVZ894;
+				DEVELOPMENT_TEAM = F6XL2RL8RU;
 				INFOPLIST_FILE = Catarina/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -600,7 +604,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MK55QVZ894;
+				DEVELOPMENT_TEAM = F6XL2RL8RU;
 				INFOPLIST_FILE = Catarina/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
