@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let isAnonymous = user?.isAnonymous  // true
             let uid = user?.uid
             print("ID \(uid)")
+            //teste
         }
         return true
     }
