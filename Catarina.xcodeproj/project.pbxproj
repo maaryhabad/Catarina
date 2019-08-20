@@ -11,7 +11,6 @@
 		231500B5BC00B77E72948A49 /* Pods_CatarinaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F87034C0FF097D219F54A866 /* Pods_CatarinaUITests.framework */; };
 		571A1898BFF3B486D40C0662 /* Pods_CatarinaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1233A37A595774CDF1357FC6 /* Pods_CatarinaTests.framework */; };
 		719F1C8CEF34448DA7E4C7BE /* Pods_Catarina.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401DC89698A4251D47A84ACE /* Pods_Catarina.framework */; };
-		CD328FC2230B102C002DD6C7 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD328FC1230B102C002DD6C7 /* SpotifyiOS.framework */; };
 		CD719B2B2306EE9600E027CB /* RotinaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD719B2A2306EE9600E027CB /* RotinaViewController.swift */; };
 		CD719B2D2306F44800E027CB /* Familia.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD719B2C2306F36600E027CB /* Familia.storyboard */; };
 		CD994FB323059CF4006E9814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD994FB223059CF4006E9814 /* AppDelegate.swift */; };
@@ -52,7 +51,6 @@
 		A6CCADC59982CB345B8EF7BB /* Pods-CatarinaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatarinaTests.release.xcconfig"; path = "Target Support Files/Pods-CatarinaTests/Pods-CatarinaTests.release.xcconfig"; sourceTree = "<group>"; };
 		AF4605A91DBC9FDC55ABF1E9 /* Pods-CatarinaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatarinaUITests.release.xcconfig"; path = "Target Support Files/Pods-CatarinaUITests/Pods-CatarinaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C3BCC47CF79A3C8A852B9745 /* Pods-CatarinaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatarinaUITests.debug.xcconfig"; path = "Target Support Files/Pods-CatarinaUITests/Pods-CatarinaUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		CD328FC1230B102C002DD6C7 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
 		CD719B2A2306EE9600E027CB /* RotinaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotinaViewController.swift; sourceTree = "<group>"; };
 		CD719B2C2306F36600E027CB /* Familia.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Familia.storyboard; path = Base.lproj/Familia.storyboard; sourceTree = "<group>"; };
 		CD994FAF23059CF4006E9814 /* Catarina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catarina.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,7 +77,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				719F1C8CEF34448DA7E4C7BE /* Pods_Catarina.framework in Frameworks */,
-				CD328FC2230B102C002DD6C7 /* SpotifyiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,14 +122,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CD328FC0230B1017002DD6C7 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				CD328FC1230B102C002DD6C7 /* SpotifyiOS.framework */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		CD994FA623059CF4006E9814 = {
 			isa = PBXGroup;
 			children = (
@@ -158,7 +147,6 @@
 		CD994FB123059CF4006E9814 /* Catarina */ = {
 			isa = PBXGroup;
 			children = (
-				CD328FC0230B1017002DD6C7 /* Resources */,
 				CD994FB223059CF4006E9814 /* AppDelegate.swift */,
 				CD994FB423059CF4006E9814 /* ViewController.swift */,
 				CD719B2C2306F36600E027CB /* Familia.storyboard */,
@@ -597,10 +585,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F6XL2RL8RU;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Catarina/Resources",
-				);
 				INFOPLIST_FILE = Catarina/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -621,10 +605,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F6XL2RL8RU;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Catarina/Resources",
-				);
 				INFOPLIST_FILE = Catarina/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
