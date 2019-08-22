@@ -1,25 +1,19 @@
 //
-//  CellInfoTableViewCell.swift
+//  CellPrincipalViewTableViewCell.swift
 //  Catarina
 //
-//  Created by akira tsukamoto on 21/08/19.
+//  Created by Mateus Nunes on 22/08/19.
 //  Copyright © 2019 Mariana Beilune Abad. All rights reserved.
 //
 
 import UIKit
 
-class CellInfoTableViewCell: UITableViewCell {
+class CellPrincipalViewTableViewCell: UITableViewCell {
+
     
-    @IBOutlet weak var LabelTest: UILabel!
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    @IBOutlet weak var lblTitulo: UILabel!
+    @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var lblConcluido: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

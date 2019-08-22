@@ -7,14 +7,8 @@
 //
 
 import UIKit
-import SpriteKit
+import Firebase
 
-
-struct cellData {
-    var aberto = Bool()
-    var titulo = String()
-    var secundaryInfo = CellInfoTableViewCell()
-}
 
 
 class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate {
@@ -26,20 +20,24 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     @IBAction func addButton(_ sender: Any) {
-        
+    
         let addOverPopUp = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addPopUpID") as! AddPopUpViewController
-        self.addChild(addOverPopUp)
-       addOverPopUp.view.frame = self.view.frame
-        self.view.addSubview(addOverPopUp.view)
-        addOverPopUp.didMove(toParent: self)
-
+        if(!Singleton.instance.popUpAberto){
+            Singleton.instance.popUpAberto = true
+            self.addChild(addOverPopUp)
+            addOverPopUp.view.frame = self.view.frame
+            self.view.addSubview(addOverPopUp.view)
+            addOverPopUp.didMove(toParent: self)
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        tableViewData = [Tarefa.init(nTitulo: "Titulo1", nDescricao: "Descricao", nlabelTeste: "valorSecundario", nCamimhoImage: "teste.png", nAberto: false),
-        Tarefa.init(nTitulo: "Titulo2", nDescricao: "Descricao", nlabelTeste: "valorSecundario", nCamimhoImage: "teste.png", nAberto: false)]
+        Singleton.instance.adiconarTarefas(titulo: "Dar alimento", descricao: "Dar de comer", periodo: "Manhã", aberto: false, concluido: false)
+        Singleton.instance.adiconarTarefas(titulo: "Dar banho", descricao: "Dar de banho", periodo: "Tarde", aberto: false, concluido: false)
+        tableViewData = Singleton.instance.listaTarefas
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -57,13 +55,15 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0{
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else{ return UITableViewCell()}
-            cell.textLabel?.text = tableViewData[indexPath.section].titulo
-            //cell.textLabel?.text = tableViewData[indexPath.section].descricao
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CellPrincipalViewTableViewCell
+            cell.lblTitulo.text = tableViewData[indexPath.section].titulo
+            cell.lblDate.text = tableViewData[indexPath.section].periodo
+            if tableViewData[indexPath.section].concluido{cell.lblConcluido.text = "Tarefa concluida"}
+            else{cell.lblConcluido.text = "Tarefa não concluida"}
             return cell
         }else{
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellInfo") else {return UITableViewCell() as! CellInfoTableViewCell}
-           // cell.textLabel?.text = tableViewData[indexPath.section].camimhoImage
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellInfo", for: indexPath) as! CellInfoTableViewCell
+            cell.LabelTest.text = tableViewData[indexPath.section].descricao
             
             return cell
         }
@@ -71,11 +71,13 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0{
             if tableViewData[indexPath.section].aberto == true{
+                print("ta aberto")
                 tableViewData[indexPath.section].aberto = false
                 let sections = IndexSet.init(integer: indexPath.section)
                 tableView.reloadSections(sections, with: .none )//anim
                 
             }else{
+                print("ta fechado")
                 tableViewData[indexPath.section].aberto  = true
                 let sections = IndexSet.init(integer: indexPath.section)
                 tableView.reloadSections(sections, with: .none)//anim

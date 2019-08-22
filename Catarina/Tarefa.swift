@@ -11,15 +11,28 @@ import Foundation
 class Tarefa{
     var titulo:String
     var descricao:String
-    var labelTeste:String
-    var camimhoImage:String
+    var periodo:String
     var aberto:Bool
-    init(nTitulo:String,nDescricao:String,nlabelTeste:String,nCamimhoImage:String,nAberto:Bool) {
-        self.titulo = nTitulo
-        self.descricao = nDescricao
-        self.labelTeste = nlabelTeste
-        self.camimhoImage = nCamimhoImage
-        self.aberto = nAberto
+    var concluido:Bool
+    
+    
+    
+init(nTitulo:String,nDescription:String,nPeriodo:String,nAberto:Bool,nConcluido:Bool) {
+    self.titulo = nTitulo
+    self.descricao = nDescription
+    self.periodo = nPeriodo
+    self.aberto = nAberto
+    self.concluido = nConcluido
     }
+    
+init(fromDict:NSDictionary){
+    self.titulo = (fromDict["titulo"] as! String)
+    self.descricao = (fromDict["descricao"] as! String)
+    self.periodo = (fromDict["periodo"] as! String)
+    self.aberto = (fromDict["aberto"] as! Bool)
+    self.concluido = (fromDict["concluido"] as! Bool)
+    
+}
+    
 
 }

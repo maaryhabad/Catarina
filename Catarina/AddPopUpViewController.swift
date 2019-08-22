@@ -10,6 +10,10 @@ import UIKit
 
 class AddPopUpViewController: UIViewController {
 
+    
+    @IBOutlet weak var btnAddCompromisso: UIButton!
+    @IBOutlet weak var btnAddTarefa: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
@@ -18,18 +22,18 @@ class AddPopUpViewController: UIViewController {
     
     @IBOutlet weak var blurView: UIView!
     @IBAction func closePopUp(_ sender: Any) {
+        Singleton.instance.popUpAberto = false
         self.removeAnimate()
     }
     
-    func showAnimate(){
+    @IBAction func addTarefa(_ sender: Any) {
         
-//        let bluerEffect = UIBlurEffect(style: .extraLight)
-//        let blurEffectView = UIVisualEffectView(effect: bluerEffect)
-//        blurEffectView.frame = self.view.bounds
-//        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-//        blurView.addSubview(blurEffectView)
-        //blurView.alpha = 1
-
+    }
+    
+    @IBAction func addCompromisso(_ sender: Any) {
+    }
+    
+    func showAnimate(){
         self.view.transform = CGAffineTransform.init(scaleX: 2.0 , y: 2.0)
         self.view.alpha = 0.0
         UIView.animate(withDuration: 0.4, animations: {
