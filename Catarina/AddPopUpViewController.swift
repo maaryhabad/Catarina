@@ -28,10 +28,8 @@ class AddPopUpViewController: UIViewController {
 //        blurEffectView.frame = self.view.bounds
 //        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 //        blurView.addSubview(blurEffectView)
-        
-        blurView.alpha = 0.3
+        //blurView.alpha = 1
 
-        
         self.view.transform = CGAffineTransform.init(scaleX: 2.0 , y: 2.0)
         self.view.alpha = 0.0
         UIView.animate(withDuration: 0.4, animations: {
