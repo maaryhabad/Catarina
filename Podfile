@@ -10,6 +10,7 @@ target 'Catarina' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
+  pod 'Eureka'
 
 
 
