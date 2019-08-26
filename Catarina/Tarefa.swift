@@ -12,27 +12,27 @@ class Tarefa{
     var titulo:String
     var descricao:String
     var periodo:String
-    var aberto:Bool
+    //var aberto:Bool
     var concluido:Bool
     
     
     
-init(nTitulo:String,nDescription:String,nPeriodo:String,nAberto:Bool,nConcluido:Bool) {
+init(nTitulo:String,nDescription:String,nPeriodo:String,nConcluido:Bool/*,nAberto:Bool*/) {
     self.titulo = nTitulo
     self.descricao = nDescription
     self.periodo = nPeriodo
-    self.aberto = nAberto
+    //self.aberto = nAberto
     self.concluido = nConcluido
     }
     
-init(fromDict:NSDictionary){
-    self.titulo = (fromDict["titulo"] as! String)
-    self.descricao = (fromDict["descricao"] as! String)
-    self.periodo = (fromDict["periodo"] as! String)
-    self.aberto = (fromDict["aberto"] as! Bool)
-    self.concluido = (fromDict["concluido"] as! Bool)
-    
-}
-    
+//init(fromDict:NSDictionary){
+//    self.titulo = (fromDict["titulo"] as! String)
+//    self.descricao = (fromDict["descricao"] as! String)
+//    self.periodo = (fromDict["periodo"] as! String)
+//    //self.aberto = (fromDict["aberto"] as! Bool)
+//    self.concluido = (fromDict["concluido"] as! Bool)
+//
+//}
+
 
 }

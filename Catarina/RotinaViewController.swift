@@ -7,17 +7,20 @@
 //
 
 import UIKit
-import Firebase
+//import Firebase
 
 
 
 class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate {
     
-    var tableViewData = [Tarefa]()
+    
+    
+    
+    var tableViewData = [Periodo]()
     
 
     @IBOutlet weak var tableView: UITableView!
-    
+    var cont = 0
     
     @IBAction func addButton(_ sender: Any) {
     
@@ -34,22 +37,24 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        Singleton.instance.adiconarTarefas(titulo: "Dar alimento", descricao: "Dar de comer", periodo: "Manhã", aberto: false, concluido: false)
-        Singleton.instance.adiconarTarefas(titulo: "Dar banho", descricao: "Dar de banho", periodo: "Tarde", aberto: false, concluido: false)
-        tableViewData = Singleton.instance.listaTarefas
+        Singleton.instance.adiconarTarefas(titulo: "Manhã1", descricao: "Dar de comer", periodo: "Manhã", aberto: false, concluido: false)
+        Singleton.instance.adiconarTarefas(titulo: "Tarde1", descricao: "Dar de banho", periodo: "Tarde", aberto: false, concluido: false)
+        Singleton.instance.adiconarTarefas(titulo: "Noite1", descricao: "Dar de banho", periodo: "Tarde", aberto: false, concluido: false)
+        var listaPeriodo = [Periodo.init(nTitulo: "Manhã", tarefas: Singleton.instance.listaTarefas,nAberto: false),Periodo.init(nTitulo: "Tarde", tarefas: Singleton.instance.listaTarefas,nAberto: false),Periodo.init(nTitulo: "Noite", tarefas: Singleton.instance.listaTarefas,nAberto: false)]
+        tableViewData = listaPeriodo
         
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return tableViewData.count
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableViewData[section].aberto ==  false{
-            return 1
+            return tableViewData.count
         }
         else {
-            return tableViewData.count
+            return tableViewData[section].quantidadeTarefas
         }
     }
     
@@ -57,16 +62,16 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if indexPath.row == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CellPrincipalViewTableViewCell
             cell.lblTitulo.text = tableViewData[indexPath.section].titulo
-            cell.lblDate.text = tableViewData[indexPath.section].periodo
-            if tableViewData[indexPath.section].concluido{cell.lblConcluido.text = "Tarefa concluida"}
-            else{cell.lblConcluido.text = "Tarefa não concluida"}
+            //cell.lblDate.text = tableViewData[indexPath.section].periodo
+            //if tableViewData[indexPath.section].concluido{cell.lblConcluido.text = "Tarefa concluida"}
+            //else{cell.lblConcluido.text = "Tarefa não concluida"}
             return cell
         }else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellInfo", for: indexPath) as! CellInfoTableViewCell
-            cell.LabelTest.text = tableViewData[indexPath.section].descricao
-            
+            cell.LabelTest.text = tableViewData[indexPath.section].vetorTarefas[cont].titulo
             return cell
         }
+        cont+=1
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0{
@@ -76,7 +81,8 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 let sections = IndexSet.init(integer: indexPath.section)
                 tableView.reloadSections(sections, with: .none )//anim
                 
-            }else{
+            }
+            else {
                 print("ta fechado")
                 tableViewData[indexPath.section].aberto  = true
                 let sections = IndexSet.init(integer: indexPath.section)

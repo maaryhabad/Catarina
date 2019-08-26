@@ -117,7 +117,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2311.594202898551" y="-997.09821428571422"/>
+            <point key="canvasLocation" x="2220" y="-997"/>
         </scene>
         <!--Add Pop Up View Controller-->
         <scene sceneID="oy8-ec-Kfm">
