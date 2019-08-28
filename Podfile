@@ -11,6 +11,7 @@ target 'Catarina' do
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
   pod 'Eureka'
+  pod 'ImageRow'
 
 
 

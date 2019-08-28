@@ -8,6 +8,7 @@
 
 import UIKit
 import Eureka
+import ImageRow
 
 class FamiliaFormPopUpViewController: FormViewController {
     
@@ -25,11 +26,17 @@ class FamiliaFormPopUpViewController: FormViewController {
                 row.title = "Nome"
                 row.placeholder = "Nome do responsável"
         }
-//            <<< PickerInlineRow(FormItems.avatar) { row in
-//                row.title = "Avatar"
-//
-//
-//        }
+            <<< ImageRow() { row in
+                row.title = "Imagem"
+                row.sourceTypes = .PhotoLibrary
+                row.clearAction = .no
+                
+        }
+                .cellUpdate {
+                    cell, row in
+                    cell.accessoryView?.layer.cornerRadius = 17
+                    cell.accessoryView?.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+        }
         
     }
 }
