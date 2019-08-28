@@ -16,6 +16,7 @@ class FamiliaSingleton {
     private init() {}
     var nucleoFamiliar: [Familia] = []
     
+    //teste
     func adicionarFamiliar(nome: String, avatar: UIImage) {
         let familiar = Familia.init(nome: nome, avatar: avatar)
     }
