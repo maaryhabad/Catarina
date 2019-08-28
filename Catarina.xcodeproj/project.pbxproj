@@ -33,6 +33,7 @@
 		CD994FD623059CF8006E9814 /* CatarinaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD994FD523059CF8006E9814 /* CatarinaUITests.swift */; };
 		E84FDA6923140225009EC0CF /* Compromisso.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84FDA6823140225009EC0CF /* Compromisso.swift */; };
 		E84FDA6B2314028D009EC0CF /* Periodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84FDA6A2314028D009EC0CF /* Periodo.swift */; };
+		FB10815A2316AD4200E469FE /* Playlist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB1081592316AD4200E469FE /* Playlist.storyboard */; };
 		FBD6408B230D7FCA00B5DD8B /* CellInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD6408A230D7FCA00B5DD8B /* CellInfoTableViewCell.swift */; };
 		FBD6408D230D870000B5DD8B /* Tarefa.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD6408C230D870000B5DD8B /* Tarefa.swift */; };
 		FBE07579230ACB5C0012DDF6 /* AddPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE07578230ACB5C0012DDF6 /* AddPopUpViewController.swift */; };
@@ -94,6 +95,7 @@
 		E84FDA6823140225009EC0CF /* Compromisso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compromisso.swift; sourceTree = "<group>"; };
 		E84FDA6A2314028D009EC0CF /* Periodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Periodo.swift; sourceTree = "<group>"; };
 		F87034C0FF097D219F54A866 /* Pods_CatarinaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatarinaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB1081592316AD4200E469FE /* Playlist.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Playlist.storyboard; sourceTree = "<group>"; };
 		FBD6408A230D7FCA00B5DD8B /* CellInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellInfoTableViewCell.swift; sourceTree = "<group>"; };
 		FBD6408C230D870000B5DD8B /* Tarefa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tarefa.swift; sourceTree = "<group>"; };
 		FBE07578230ACB5C0012DDF6 /* AddPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPopUpViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 		CD994FB123059CF4006E9814 /* Catarina */ = {
 			isa = PBXGroup;
 			children = (
+				FB1081592316AD4200E469FE /* Playlist.storyboard */,
 				CD994FB223059CF4006E9814 /* AppDelegate.swift */,
 				CD994FB423059CF4006E9814 /* ViewController.swift */,
 				CD719B2C2306F36600E027CB /* Familia.storyboard */,
@@ -330,6 +333,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB10815A2316AD4200E469FE /* Playlist.storyboard in Resources */,
 				CD994FC023059CF8006E9814 /* LaunchScreen.storyboard in Resources */,
 				0117EA552305C68C00E125D5 /* GoogleService-Info.plist in Resources */,
 				CD994FBD23059CF8006E9814 /* Assets.xcassets in Resources */,
@@ -640,7 +644,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AMXQN329PY;
+				DEVELOPMENT_TEAM = F6XL2RL8RU;
 				INFOPLIST_FILE = Catarina/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -660,7 +664,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AMXQN329PY;
+				DEVELOPMENT_TEAM = F6XL2RL8RU;
 				INFOPLIST_FILE = Catarina/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
