@@ -14,8 +14,6 @@ class FamiliaFormPopUpViewController: FormViewController {
     
     struct FormItems {
         static let nome = "nome"
-        static let avatar = "avatar"
-        static let contato = "contato"
     }
     
     override func viewDidLoad() {
