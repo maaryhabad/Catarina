@@ -195,6 +195,76 @@
             </objects>
             <point key="canvasLocation" x="3063.768115942029" y="-997.09821428571422"/>
         </scene>
+        <!--Pop Up Description View Controller-->
+        <scene sceneID="AgG-hA-bYp">
+            <objects>
+                <viewController storyboardIdentifier="popUpDescription" id="EMv-cq-KA9" customClass="PopUpDescriptionViewController" customModule="Catarina" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LYR-sL-cOQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kvz-WP-AUU">
+                                <rect key="frame" x="41.5" y="139.5" width="331" height="627"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRR-FJ-AQK">
+                                        <rect key="frame" x="142" y="547" width="48" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="CLOSE">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" red="0.1333333333" green="0.20392156859999999" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="closePopUp:" destination="EMv-cq-KA9" eventType="touchUpInside" id="d1U-A9-xrD"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pJ-I1-L8A" userLabel="lblDescricao">
+                                        <rect key="frame" x="139.5" y="246" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.99410844840000001" green="0.26865905509999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNM-OC-yG7" userLabel="lblTitulo">
+                                <rect key="frame" x="181" y="209" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZD-f4-tm1" userLabel="lblConcluido">
+                                <rect key="frame" x="181" y="571" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Kvz-WP-AUU" firstAttribute="width" secondItem="LYR-sL-cOQ" secondAttribute="width" multiplier="0.8" id="3bh-h7-8gX"/>
+                            <constraint firstItem="Kvz-WP-AUU" firstAttribute="height" secondItem="LYR-sL-cOQ" secondAttribute="height" multiplier="0.7" id="DSQ-N7-kLd"/>
+                            <constraint firstItem="Kvz-WP-AUU" firstAttribute="centerY" secondItem="0Pu-Ab-oes" secondAttribute="centerY" id="DSy-4D-I1c"/>
+                            <constraint firstItem="Kvz-WP-AUU" firstAttribute="leading" secondItem="TNM-OC-yG7" secondAttribute="trailing" constant="-181.5" id="Q2J-T6-QBl"/>
+                            <constraint firstItem="JZD-f4-tm1" firstAttribute="centerX" secondItem="3pJ-I1-L8A" secondAttribute="centerX" id="TrB-GA-U6i"/>
+                            <constraint firstItem="3pJ-I1-L8A" firstAttribute="top" secondItem="TNM-OC-yG7" secondAttribute="bottom" constant="156" id="oP1-XQ-Ekj"/>
+                            <constraint firstItem="JZD-f4-tm1" firstAttribute="top" secondItem="3pJ-I1-L8A" secondAttribute="bottom" constant="164.5" id="rvE-Mi-krF"/>
+                            <constraint firstItem="3pJ-I1-L8A" firstAttribute="centerX" secondItem="TNM-OC-yG7" secondAttribute="centerX" id="vMz-ko-gHw"/>
+                            <constraint firstItem="Kvz-WP-AUU" firstAttribute="centerX" secondItem="0Pu-Ab-oes" secondAttribute="centerX" id="w9u-ep-ROU"/>
+                            <constraint firstItem="TNM-OC-yG7" firstAttribute="top" secondItem="Kvz-WP-AUU" secondAttribute="top" multiplier="1.5" id="x0K-VL-FV0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0Pu-Ab-oes"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblConcluido" destination="JZD-f4-tm1" id="Ggt-nv-Urt"/>
+                        <outlet property="lblDescricao" destination="3pJ-I1-L8A" id="bbb-5u-Gbd"/>
+                        <outlet property="lblTtitulo" destination="TNM-OC-yG7" id="OXH-H2-2EW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vsf-QN-hJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3811.594202898551" y="-995.08928571428567"/>
+        </scene>
         <!--Rotina-->
         <scene sceneID="pvq-cT-1bh">
             <objects>
