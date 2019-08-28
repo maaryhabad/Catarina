@@ -14,6 +14,10 @@
 		571A1898BFF3B486D40C0662 /* Pods_CatarinaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1233A37A595774CDF1357FC6 /* Pods_CatarinaTests.framework */; };
 		6C3802F023141CCE00E5A6D4 /* FamiliaFormPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3802EF23141CCE00E5A6D4 /* FamiliaFormPopUpViewController.swift */; };
 		719F1C8CEF34448DA7E4C7BE /* Pods_Catarina.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401DC89698A4251D47A84ACE /* Pods_Catarina.framework */; };
+		CD44AFA62316A4C400D6E8E3 /* Playlists.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD44AFA22316A4C200D6E8E3 /* Playlists.swift */; };
+		CD44AFA72316A4C400D6E8E3 /* PlaylistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD44AFA32316A4C300D6E8E3 /* PlaylistModel.swift */; };
+		CD44AFA82316A4C400D6E8E3 /* PlaylistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD44AFA42316A4C300D6E8E3 /* PlaylistCollectionViewCell.swift */; };
+		CD44AFA92316A4C400D6E8E3 /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD44AFA52316A4C300D6E8E3 /* PlaylistViewController.swift */; };
 		CD719B2B2306EE9600E027CB /* RotinaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD719B2A2306EE9600E027CB /* RotinaViewController.swift */; };
 		CD719B2D2306F44800E027CB /* Familia.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD719B2C2306F36600E027CB /* Familia.storyboard */; };
 		CD994FB323059CF4006E9814 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD994FB223059CF4006E9814 /* AppDelegate.swift */; };
@@ -61,6 +65,10 @@
 		A6CCADC59982CB345B8EF7BB /* Pods-CatarinaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatarinaTests.release.xcconfig"; path = "Target Support Files/Pods-CatarinaTests/Pods-CatarinaTests.release.xcconfig"; sourceTree = "<group>"; };
 		AF4605A91DBC9FDC55ABF1E9 /* Pods-CatarinaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatarinaUITests.release.xcconfig"; path = "Target Support Files/Pods-CatarinaUITests/Pods-CatarinaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C3BCC47CF79A3C8A852B9745 /* Pods-CatarinaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatarinaUITests.debug.xcconfig"; path = "Target Support Files/Pods-CatarinaUITests/Pods-CatarinaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CD44AFA22316A4C200D6E8E3 /* Playlists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Playlists.swift; sourceTree = "<group>"; };
+		CD44AFA32316A4C300D6E8E3 /* PlaylistModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistModel.swift; sourceTree = "<group>"; };
+		CD44AFA42316A4C300D6E8E3 /* PlaylistCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistCollectionViewCell.swift; sourceTree = "<group>"; };
+		CD44AFA52316A4C300D6E8E3 /* PlaylistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
 		CD719B2A2306EE9600E027CB /* RotinaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotinaViewController.swift; sourceTree = "<group>"; };
 		CD719B2C2306F36600E027CB /* Familia.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Familia.storyboard; path = Base.lproj/Familia.storyboard; sourceTree = "<group>"; };
 		CD994FAF23059CF4006E9814 /* Catarina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Catarina.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +178,10 @@
 				CD994FC123059CF8006E9814 /* Info.plist */,
 				0117EA542305C68C00E125D5 /* GoogleService-Info.plist */,
 				CD994FB923059CF4006E9814 /* Catarina.xcdatamodeld */,
+				CD44AFA42316A4C300D6E8E3 /* PlaylistCollectionViewCell.swift */,
+				CD44AFA32316A4C300D6E8E3 /* PlaylistModel.swift */,
+				CD44AFA22316A4C200D6E8E3 /* Playlists.swift */,
+				CD44AFA52316A4C300D6E8E3 /* PlaylistViewController.swift */,
 				FBE07578230ACB5C0012DDF6 /* AddPopUpViewController.swift */,
 				CD719B2A2306EE9600E027CB /* RotinaViewController.swift */,
 				FBD6408A230D7FCA00B5DD8B /* CellInfoTableViewCell.swift */,
@@ -428,11 +440,15 @@
 				01A0113F230EC5AB00BEC469 /* Singleton.swift in Sources */,
 				E84FDA6B2314028D009EC0CF /* Periodo.swift in Sources */,
 				CD719B2B2306EE9600E027CB /* RotinaViewController.swift in Sources */,
+				CD44AFA82316A4C400D6E8E3 /* PlaylistCollectionViewCell.swift in Sources */,
 				FBD6408D230D870000B5DD8B /* Tarefa.swift in Sources */,
 				CD994FB323059CF4006E9814 /* AppDelegate.swift in Sources */,
 				FBD6408B230D7FCA00B5DD8B /* CellInfoTableViewCell.swift in Sources */,
+				CD44AFA92316A4C400D6E8E3 /* PlaylistViewController.swift in Sources */,
 				FBE07579230ACB5C0012DDF6 /* AddPopUpViewController.swift in Sources */,
 				CD994FBB23059CF4006E9814 /* Catarina.xcdatamodeld in Sources */,
+				CD44AFA72316A4C400D6E8E3 /* PlaylistModel.swift in Sources */,
+				CD44AFA62316A4C400D6E8E3 /* Playlists.swift in Sources */,
 				6C3802F023141CCE00E5A6D4 /* FamiliaFormPopUpViewController.swift in Sources */,
 				01A0113D230EBF0F00BEC469 /* CellPrincipalViewTableViewCell.swift in Sources */,
 				E84FDA6923140225009EC0CF /* Compromisso.swift in Sources */,
