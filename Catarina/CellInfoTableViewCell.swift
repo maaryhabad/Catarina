@@ -12,15 +12,6 @@ class CellInfoTableViewCell: UITableViewCell {
     
     @IBOutlet weak var LabelTest: UILabel!
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
