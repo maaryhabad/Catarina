@@ -16,6 +16,7 @@
 		6C3802F22316A42E00E5A6D4 /* FamiliaSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3802F12316A42E00E5A6D4 /* FamiliaSingleton.swift */; };
 		6C3802F42316A4B000E5A6D4 /* Familia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3802F32316A4B000E5A6D4 /* Familia.swift */; };
 		6C3802F62316A7B000E5A6D4 /* FamiliaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3802F52316A7AF00E5A6D4 /* FamiliaViewController.swift */; };
+		6C3802F82316BC9A00E5A6D4 /* FamiliaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3802F72316BC9A00E5A6D4 /* FamiliaViewCell.swift */; };
 		719F1C8CEF34448DA7E4C7BE /* Pods_Catarina.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401DC89698A4251D47A84ACE /* Pods_Catarina.framework */; };
 		CD44AFA62316A4C400D6E8E3 /* Playlists.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD44AFA22316A4C200D6E8E3 /* Playlists.swift */; };
 		CD44AFA72316A4C400D6E8E3 /* PlaylistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD44AFA32316A4C300D6E8E3 /* PlaylistModel.swift */; };
@@ -69,6 +70,7 @@
 		6C3802F12316A42E00E5A6D4 /* FamiliaSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliaSingleton.swift; sourceTree = "<group>"; };
 		6C3802F32316A4B000E5A6D4 /* Familia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Familia.swift; sourceTree = "<group>"; };
 		6C3802F52316A7AF00E5A6D4 /* FamiliaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliaViewController.swift; sourceTree = "<group>"; };
+		6C3802F72316BC9A00E5A6D4 /* FamiliaViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamiliaViewCell.swift; sourceTree = "<group>"; };
 		90E39FC8AB94CD00EEA471AD /* Pods-Catarina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catarina.debug.xcconfig"; path = "Target Support Files/Pods-Catarina/Pods-Catarina.debug.xcconfig"; sourceTree = "<group>"; };
 		994D34E429B5AF51336D4DAF /* Pods-CatarinaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatarinaTests.debug.xcconfig"; path = "Target Support Files/Pods-CatarinaTests/Pods-CatarinaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6CCADC59982CB345B8EF7BB /* Pods-CatarinaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatarinaTests.release.xcconfig"; path = "Target Support Files/Pods-CatarinaTests/Pods-CatarinaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -207,8 +209,15 @@
 				6C3802F12316A42E00E5A6D4 /* FamiliaSingleton.swift */,
 				6C3802F32316A4B000E5A6D4 /* Familia.swift */,
 				6C3802F52316A7AF00E5A6D4 /* FamiliaViewController.swift */,
+<<<<<<< HEAD
+				6C3802F72316BC9A00E5A6D4 /* FamiliaViewCell.swift */,
+=======
 				FB10815D2316AEA000E469FE /* PopUpDescriptionViewController.swift */,
+<<<<<<< HEAD
 				CDC2C6F22316BBB2007AC928 /* Compartilhar.swift */,
+=======
+>>>>>>> cba1cb7c8d54a64ab17c5cea49e3683dffab5a0b
+>>>>>>> 8c70682c5a4600ca62b7336f9a8c15df22ab01b4
 			);
 			path = Catarina;
 			sourceTree = "<group>";
@@ -462,6 +471,7 @@
 				6C3802F62316A7B000E5A6D4 /* FamiliaViewController.swift in Sources */,
 				E84FDA6B2314028D009EC0CF /* Periodo.swift in Sources */,
 				CD719B2B2306EE9600E027CB /* RotinaViewController.swift in Sources */,
+				6C3802F82316BC9A00E5A6D4 /* FamiliaViewCell.swift in Sources */,
 				CD44AFA82316A4C400D6E8E3 /* PlaylistCollectionViewCell.swift in Sources */,
 				FBD6408D230D870000B5DD8B /* Tarefa.swift in Sources */,
 				CD994FB323059CF4006E9814 /* AppDelegate.swift in Sources */,
