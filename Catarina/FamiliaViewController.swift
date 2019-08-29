@@ -9,6 +9,7 @@
 import UIKit
 
 class FamiliaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate {
+<<<<<<< Updated upstream
     
     var tableViewData = [Familia]()
     
@@ -19,10 +20,22 @@ class FamiliaViewController: UIViewController, UITableViewDelegate, UITableViewD
         if(!FamiliaSingleton.instance.popUpAberto) {
             FamiliaSingleton.instance.popUpAberto = true
             self.addFamiliar(addOverPopUp)
+=======
+
+    @IBOutlet weak var tableView: UITableView!
+    var tableViewData = [Familia]()
+
+    @IBAction func addFamiliar(_ sender: Any) {
+        let addOverPopUp = UIStoryboard(name: "Familia", bundle: nil).instantiateViewController(withIdentifier: "addPopUpId") as! FamiliaFormPopUpViewController
+        if(!FamiliaSingleton.instance.popUpAberto) {
+            FamiliaSingleton.instance.popUpAberto = true
+            self.addChild(addOverPopUp)
+>>>>>>> Stashed changes
             addOverPopUp.view.frame = self.view.frame
             self.view.addSubview(addOverPopUp.view)
             addOverPopUp.didMove(toParent: self)
         }
+<<<<<<< Updated upstream
     }
 
     override func viewDidLoad() {
@@ -34,6 +47,17 @@ class FamiliaViewController: UIViewController, UITableViewDelegate, UITableViewD
         FamiliaSingleton.instance.adicionarFamiliar(nome: "Pai", avatar: UIImage(named: "ssdklmsd")!)
         
         
+=======
+        
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        FamiliaSingleton.instance.adicionarFamiliar(nome: "Mae", avatar: UIImage(named: "playlist")!)
+        FamiliaSingleton.instance.adicionarFamiliar(nome: "Pai", avatar: UIImage(named: "playlist")!)
+    
+>>>>>>> Stashed changes
         let nucleoFamiliar = FamiliaSingleton.instance.nucleoFamiliar
         tableViewData = nucleoFamiliar
     }
@@ -47,6 +71,7 @@ class FamiliaViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+<<<<<<< Updated upstream
         let cell = tableview.dequeueReusableCell(withIdentifier: "familiaCell", for: indexPath) as! FamiliaViewCell
         
         let familiar = tableViewData[indexPath.row]
@@ -54,9 +79,17 @@ class FamiliaViewController: UIViewController, UITableViewDelegate, UITableViewD
         cell.nomeFamiliar.text = familiar.nome
         cell.avatar.image = familiar.avatar
         
+=======
+        let cell = tableView.dequeueReusableCell(withIdentifier: "familiaCell", for: indexPath) as! FamiliaInfoCell
+        cell.nomeLbl.text = tableViewData[indexPath.row].nome
+        cell.avatarImg.image = tableViewData[indexPath.row].avatar
+>>>>>>> Stashed changes
         return cell
     }
     
     
+<<<<<<< Updated upstream
     
+=======
+>>>>>>> Stashed changes
 }
