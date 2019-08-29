@@ -30,8 +30,8 @@ class FamiliaViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableview.delegate = self
         tableview.dataSource = self
         
-        FamiliaSingleton.instance.adicionarFamiliar(nome: "Mamae", avatar: UIImage(named: "teste")!)
-        FamiliaSingleton.instance.adicionarFamiliar(nome: "Pai", avatar: UIImage(named: "ssdklmsd")!)
+        FamiliaSingleton.instance.adicionarFamiliar(nome: "Mamae", avatar: UIImage(named: "playlist")!)
+        FamiliaSingleton.instance.adicionarFamiliar(nome: "Pai", avatar: UIImage(named: "playlist")!)
         
         
         let nucleoFamiliar = FamiliaSingleton.instance.nucleoFamiliar
