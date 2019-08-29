@@ -38,6 +38,7 @@ class PopUpDescriptionViewController: UIViewController {
             UIView.animate(withDuration: 0.4, animations: {
                 self.view.alpha = 1.0
                 self.view.transform = CGAffineTransform.init(scaleX: 1.0, y: 1.0)
+                //print(<#T##items: Any...##Any#>)
             })
         }
         func removeAnimate(){
