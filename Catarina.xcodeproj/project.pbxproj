@@ -209,15 +209,9 @@
 				6C3802F12316A42E00E5A6D4 /* FamiliaSingleton.swift */,
 				6C3802F32316A4B000E5A6D4 /* Familia.swift */,
 				6C3802F52316A7AF00E5A6D4 /* FamiliaViewController.swift */,
-<<<<<<< HEAD
 				6C3802F72316BC9A00E5A6D4 /* FamiliaViewCell.swift */,
-=======
 				FB10815D2316AEA000E469FE /* PopUpDescriptionViewController.swift */,
-<<<<<<< HEAD
 				CDC2C6F22316BBB2007AC928 /* Compartilhar.swift */,
-=======
->>>>>>> cba1cb7c8d54a64ab17c5cea49e3683dffab5a0b
->>>>>>> 8c70682c5a4600ca62b7336f9a8c15df22ab01b4
 			);
 			path = Catarina;
 			sourceTree = "<group>";
