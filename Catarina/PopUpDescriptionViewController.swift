@@ -13,24 +13,33 @@ class PopUpDescriptionViewController: UIViewController {
     
     @IBOutlet weak var lblTtitulo: UILabel!
     @IBOutlet weak var lblDescricao: UILabel!
-    @IBOutlet weak var lblConcluido: UILabel!
+    @IBOutlet weak var lblLocal: UILabel!
+    @IBOutlet weak var lblHora: UILabel!
+    @IBOutlet weak var viewMid: UIView!
     
-    
-    
-    
-    
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            self.view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
-            self.showAnimate()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
+        self.showAnimate()
             
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch: UITouch? = touches.first
+        //location is relative to the current view
+        // do something with the touched point
+        if touch?.view != viewMid {
+            Singleton.instance.popUpDescricaoAberto = false
+            self.removeAnimate()
         }
+    }
     
        
     @IBAction func closePopUp(_ sender: Any) {
         Singleton.instance.popUpDescricaoAberto = false
         self.removeAnimate()
     }
+    
     
         func showAnimate(){
             self.view.transform = CGAffineTransform.init(scaleX: 2.0 , y: 2.0)
