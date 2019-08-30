@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-
 func mandarMensagem() {
     
     var texto = "Olá\nVocê recebeu uma tarefa!"
