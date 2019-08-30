@@ -60,7 +60,6 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="LabelTest" destination="CFB-Jh-lC3" id="5Ls-Co-4VQ"/>
                                             <outlet property="avatar" destination="ojB-KK-jN1" id="hWy-cT-wD6"/>
                                             <outlet property="nomeFamiliar" destination="CFB-Jh-lC3" id="hkG-bN-Bk1"/>
                                         </connections>
@@ -86,11 +85,13 @@
             </objects>
             <point key="canvasLocation" x="2986.9565217391305" y="-178.125"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Família-->
         <scene sceneID="X0d-PS-QNn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rt9-6y-jSe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Família" id="jmm-aw-P7k"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2Wl-Nb-rq9">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
