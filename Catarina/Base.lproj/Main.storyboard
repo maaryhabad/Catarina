@@ -104,13 +104,29 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="0G0-17-dmp">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellDias" id="0G0-17-dmp" customClass="CellCollectionDays" customModule="Catarina" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qea-en-X7T">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="9DF-yo-miL"/>
+                                                        <constraint firstAttribute="width" constant="50" id="ogI-4Y-0ZU"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="qea-en-X7T" firstAttribute="centerX" secondItem="0G0-17-dmp" secondAttribute="centerX" id="FK9-V2-Bq5"/>
+                                            <constraint firstItem="qea-en-X7T" firstAttribute="centerY" secondItem="0G0-17-dmp" secondAttribute="centerY" id="HFR-D4-PXX"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="image" destination="qea-en-X7T" id="Mjs-au-6k9"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

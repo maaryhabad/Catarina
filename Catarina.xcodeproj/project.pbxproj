@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0117EA552305C68C00E125D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0117EA542305C68C00E125D5 /* GoogleService-Info.plist */; };
 		01608E15231D59150078BD7A /* Dia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01608E14231D59150078BD7A /* Dia.swift */; };
+		01608E17231D5D990078BD7A /* CellCollectionDays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01608E16231D5D990078BD7A /* CellCollectionDays.swift */; };
 		01A0113D230EBF0F00BEC469 /* CellPrincipalViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0113C230EBF0F00BEC469 /* CellPrincipalViewTableViewCell.swift */; };
 		01A0113F230EC5AB00BEC469 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A0113E230EC5AB00BEC469 /* Singleton.swift */; };
 		231500B5BC00B77E72948A49 /* Pods_CatarinaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F87034C0FF097D219F54A866 /* Pods_CatarinaUITests.framework */; };
@@ -63,6 +64,7 @@
 /* Begin PBXFileReference section */
 		0117EA542305C68C00E125D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		01608E14231D59150078BD7A /* Dia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dia.swift; sourceTree = "<group>"; };
+		01608E16231D5D990078BD7A /* CellCollectionDays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellCollectionDays.swift; sourceTree = "<group>"; };
 		01A0113C230EBF0F00BEC469 /* CellPrincipalViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellPrincipalViewTableViewCell.swift; sourceTree = "<group>"; };
 		01A0113E230EC5AB00BEC469 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		048F27E2D0A930F8ACBC48F0 /* Pods-Catarina.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catarina.release.xcconfig"; path = "Target Support Files/Pods-Catarina/Pods-Catarina.release.xcconfig"; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				FB10815D2316AEA000E469FE /* PopUpDescriptionViewController.swift */,
 				CDC2C6F22316BBB2007AC928 /* Compartilhar.swift */,
 				01608E14231D59150078BD7A /* Dia.swift */,
+				01608E16231D5D990078BD7A /* CellCollectionDays.swift */,
 			);
 			path = Catarina;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				FBD6408B230D7FCA00B5DD8B /* CellInfoTableViewCell.swift in Sources */,
 				CD44AFA92316A4C400D6E8E3 /* PlaylistViewController.swift in Sources */,
 				FBE07579230ACB5C0012DDF6 /* AddPopUpViewController.swift in Sources */,
+				01608E17231D5D990078BD7A /* CellCollectionDays.swift in Sources */,
 				CD994FBB23059CF4006E9814 /* Catarina.xcdatamodeld in Sources */,
 				CD44AFA72316A4C400D6E8E3 /* PlaylistModel.swift in Sources */,
 				01608E15231D59150078BD7A /* Dia.swift in Sources */,

@@ -14,6 +14,8 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        collectionView.delegate = self
+        collectionView.dataSource = self
         Singleton.instance.adiconarTarefas(titulo: "Acordar", descricao: "Acordar a crianca", periodo: "Manhã", concluido: false)
         Singleton.instance.adiconarTarefas(titulo: "Amamentar", descricao: "Botar pra mamar", periodo: "Manhã", concluido: false)
         Singleton.instance.adiconarTarefas(titulo: "Fazer coco", descricao: "Cagar na crianca", periodo: "Manhã", concluido: false)
@@ -24,18 +26,21 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         Singleton.instance.adiconarTarefas(titulo: "Comer", descricao: "Socar comida na crianca", periodo: "Noite", concluido: false)
         Singleton.instance.adiconarTarefas(titulo: "Dormir", descricao: "Botar pra dormir", periodo: "Noite", concluido: false)
         Singleton.instance.adiconarCompromisso(titulo: "Vacina", descricao: "Dar Vacina", periodo: "Tarde", concluido: false, lembrar: true, local: "Av getulio varguinhas")
-        
         let listaPeriodo = Singleton.instance.listaDia[0].listaPeriodo
         tableViewData = listaPeriodo
         
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        return 7
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
+        
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellDias", for: indexPath) as! CellCollectionDays
+            cell.image.image = UIImage(named: "test")
+            return cell
+        
     }
     
     
