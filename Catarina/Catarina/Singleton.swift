@@ -7,7 +7,9 @@ class Singleton{
     var popUpAberto = false
     var popUpDescricaoAberto = false
     private init(){}
+
     var nucleoFamiliar: [Familia] = []
+
     var listaPeriodo:[Periodo] = [Periodo.init(nTitulo: "Manhã", tarefas: [] , nAberto: false),
                                   Periodo.init(nTitulo: "Tarde", tarefas: [] , nAberto: false),
                                   Periodo.init(nTitulo: "Noite", tarefas: [] , nAberto: false)]

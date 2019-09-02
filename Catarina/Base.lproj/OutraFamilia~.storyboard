@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1RA-qN-dIK">
-                                <rect key="frame" x="0.0" y="182" width="414" height="717"/>
+                                <rect key="frame" x="0.0" y="2.5" width="414" height="896"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellInfo" rowHeight="155" id="e2n-Hr-j9j" customClass="CellInfoTableViewCell" customModule="Catarina" customModuleProvider="target">
@@ -94,37 +94,13 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1mF-pT-izI">
-                                <rect key="frame" x="0.0" y="37" width="414" height="145"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gdh-dl-oDq">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lSz-wz-2uL">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="1RA-qN-dIK" firstAttribute="top" secondItem="1mF-pT-izI" secondAttribute="bottom" id="UYd-KG-Abd"/>
                             <constraint firstItem="1RA-qN-dIK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YZz-RD-OaV"/>
-                            <constraint firstItem="1mF-pT-izI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Yh6-mm-yqF"/>
-                            <constraint firstItem="1RA-qN-dIK" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.8" id="eME-DK-xRY"/>
+                            <constraint firstItem="1RA-qN-dIK" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="eME-DK-xRY"/>
                             <constraint firstItem="1RA-qN-dIK" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="kfn-Gw-b1T"/>
-                            <constraint firstItem="1RA-qN-dIK" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.2" id="ooI-6J-c4Z"/>
-                            <constraint firstItem="1mF-pT-izI" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.2" id="s72-4i-d8M"/>
-                            <constraint firstItem="1mF-pT-izI" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="vK0-qO-Vis"/>
+                            <constraint firstItem="1RA-qN-dIK" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ooI-6J-c4Z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -136,7 +112,6 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="collectionView" destination="1mF-pT-izI" id="VSY-et-9It"/>
                         <outlet property="tableView" destination="1RA-qN-dIK" id="mgf-yU-4Ks"/>
                     </connections>
                 </viewController>
@@ -147,39 +122,71 @@
         <!--Add Pop Up View Controller-->
         <scene sceneID="oy8-ec-Kfm">
             <objects>
-                <viewController storyboardIdentifier="addViewController" id="Uyo-lP-acH" customClass="AddPopUpViewController" customModule="Catarina" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addPopUpID" id="Uyo-lP-acH" customClass="AddPopUpViewController" customModule="Catarina" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zAn-v3-8qR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfY-PI-r33" userLabel="btnAddTarefa">
-                                <rect key="frame" x="116" y="251" width="183" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Adicionar uma tarefa ">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="AddTarefa:" destination="Uyo-lP-acH" eventType="touchUpInside" id="CK3-Ay-McP"/>
-                                    <action selector="addTarefa:" destination="Uyo-lP-acH" eventType="touchUpInside" id="DDm-5h-VuT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGD-Q8-Ylr" userLabel="btnAddCompromisso">
-                                <rect key="frame" x="89" y="175" width="236" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Adicionar um compromisso">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="addCompromisso:" destination="Uyo-lP-acH" eventType="touchUpInside" id="EGE-u4-Ljg"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fnK-9g-w8a" userLabel="blurView">
+                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qel-Ru-COj">
+                                <rect key="frame" x="62" y="202.5" width="290" height="491"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3n9-Wc-06q" userLabel="Close">
+                                        <rect key="frame" x="115" y="419" width="60" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Close"/>
+                                        <connections>
+                                            <action selector="closePopUp:" destination="Uyo-lP-acH" eventType="touchUpInside" id="bGw-g1-W4Y"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfY-PI-r33" userLabel="btnAddTarefa">
+                                        <rect key="frame" x="51" y="105" width="183" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Adicionar uma tarefa ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="AddTarefa:" destination="Uyo-lP-acH" eventType="touchUpInside" id="CK3-Ay-McP"/>
+                                            <action selector="addTarefa:" destination="Uyo-lP-acH" eventType="touchUpInside" id="DDm-5h-VuT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGD-Q8-Ylr" userLabel="btnAddCompromisso">
+                                        <rect key="frame" x="29" y="229.5" width="236" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Adicionar um compromisso">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addCompromisso:" destination="Uyo-lP-acH" eventType="touchUpInside" id="EGE-u4-Ljg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="3n9-Wc-06q" firstAttribute="centerX" secondItem="qel-Ru-COj" secondAttribute="centerX" id="DaN-Hv-18n"/>
+                                    <constraint firstAttribute="bottom" secondItem="3n9-Wc-06q" secondAttribute="bottom" constant="31" id="qln-tJ-aCv"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fnK-9g-w8a" firstAttribute="width" secondItem="zAn-v3-8qR" secondAttribute="width" id="0xT-zI-Y8v"/>
+                            <constraint firstItem="fnK-9g-w8a" firstAttribute="height" secondItem="zAn-v3-8qR" secondAttribute="height" id="1E6-ZP-9iz"/>
+                            <constraint firstItem="fnK-9g-w8a" firstAttribute="centerY" secondItem="2Bs-YM-JnB" secondAttribute="centerY" id="6fs-Ji-EbS"/>
+                            <constraint firstItem="qel-Ru-COj" firstAttribute="height" secondItem="2Bs-YM-JnB" secondAttribute="height" multiplier="0.6" id="CZQ-tc-nEy"/>
+                            <constraint firstItem="qel-Ru-COj" firstAttribute="width" secondItem="2Bs-YM-JnB" secondAttribute="width" multiplier="0.7" id="CqW-Zt-Jzu"/>
+                            <constraint firstItem="qel-Ru-COj" firstAttribute="centerY" secondItem="zAn-v3-8qR" secondAttribute="centerY" id="CvJ-SN-Efo"/>
+                            <constraint firstItem="qel-Ru-COj" firstAttribute="centerX" secondItem="zAn-v3-8qR" secondAttribute="centerX" id="Ow9-8J-M8i"/>
+                            <constraint firstItem="fnK-9g-w8a" firstAttribute="centerX" secondItem="2Bs-YM-JnB" secondAttribute="centerX" id="rSv-hq-NaD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2Bs-YM-JnB"/>
                     </view>
                     <connections>
+                        <outlet property="blurView" destination="fnK-9g-w8a" id="OJI-YM-23i"/>
                         <outlet property="btnAddCompromisso" destination="QGD-Q8-Ylr" id="y1m-Nf-DnG"/>
                         <outlet property="btnAddTarefa" destination="nfY-PI-r33" id="xwT-1U-dOO"/>
                     </connections>
@@ -293,7 +300,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Nx8-Lk-RP0">
             <objects>
-                <tabBarController storyboardIdentifier="UITabBarController-l6J-gg-Cet" automaticallyAdjustsScrollViewInsets="NO" id="l6J-gg-Cet" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="l6J-gg-Cet" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="TKI-YX-yXb"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="icb-O3-XRa">
@@ -303,12 +310,23 @@
                     </tabBar>
                     <connections>
                         <segue destination="mML-Ut-fyl" kind="relationship" relationship="viewControllers" id="hz8-28-8iL"/>
+                        <segue destination="ccl-Gh-I34" kind="relationship" relationship="viewControllers" id="UkH-0A-2Ga"/>
                         <segue destination="Iyt-mJ-vA2" kind="relationship" relationship="viewControllers" id="Hin-SG-74P"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U8L-e7-E1Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="405.79710144927537" y="-590.625"/>
+        </scene>
+        <!--Familia-->
+        <scene sceneID="Zna-WO-cUy">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Familia" id="ccl-Gh-I34" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="PVl-Ed-5EC"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HAX-NR-kzx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1312" y="-178"/>
         </scene>
         <!--Playlist-->
         <scene sceneID="Sdc-qN-Fgc">
@@ -319,6 +337,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GMP-NO-zRE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1805" y="-298"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="H9E-9t-YXz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bpz-iw-NWu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dPm-CY-xee">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="l6J-gg-Cet" kind="relationship" relationship="rootViewController" id="QfG-lt-d0t"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5gF-VK-J60" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1260.8695652173915" y="214.95535714285714"/>
         </scene>
     </scenes>
 </document>
