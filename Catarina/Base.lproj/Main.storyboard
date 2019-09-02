@@ -224,6 +224,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iko-Cp-J6e" userLabel="lblLocal">
+                                        <rect key="frame" x="145" y="345" width="208" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.99410844840000001" green="0.26865905509999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -233,8 +240,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZD-f4-tm1" userLabel="lblConcluido">
-                                <rect key="frame" x="181" y="571" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kiQ-DU-8XB" userLabel="lblHora">
+                                <rect key="frame" x="181" y="438" width="136" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -246,9 +254,7 @@
                             <constraint firstItem="Kvz-WP-AUU" firstAttribute="height" secondItem="LYR-sL-cOQ" secondAttribute="height" multiplier="0.7" id="DSQ-N7-kLd"/>
                             <constraint firstItem="Kvz-WP-AUU" firstAttribute="centerY" secondItem="0Pu-Ab-oes" secondAttribute="centerY" id="DSy-4D-I1c"/>
                             <constraint firstItem="Kvz-WP-AUU" firstAttribute="leading" secondItem="TNM-OC-yG7" secondAttribute="trailing" constant="-181.5" id="Q2J-T6-QBl"/>
-                            <constraint firstItem="JZD-f4-tm1" firstAttribute="centerX" secondItem="3pJ-I1-L8A" secondAttribute="centerX" id="TrB-GA-U6i"/>
                             <constraint firstItem="3pJ-I1-L8A" firstAttribute="top" secondItem="TNM-OC-yG7" secondAttribute="bottom" constant="156" id="oP1-XQ-Ekj"/>
-                            <constraint firstItem="JZD-f4-tm1" firstAttribute="top" secondItem="3pJ-I1-L8A" secondAttribute="bottom" constant="164.5" id="rvE-Mi-krF"/>
                             <constraint firstItem="3pJ-I1-L8A" firstAttribute="centerX" secondItem="TNM-OC-yG7" secondAttribute="centerX" id="vMz-ko-gHw"/>
                             <constraint firstItem="Kvz-WP-AUU" firstAttribute="centerX" secondItem="0Pu-Ab-oes" secondAttribute="centerX" id="w9u-ep-ROU"/>
                             <constraint firstItem="TNM-OC-yG7" firstAttribute="top" secondItem="Kvz-WP-AUU" secondAttribute="top" multiplier="1.5" id="x0K-VL-FV0"/>
@@ -256,8 +262,9 @@
                         <viewLayoutGuide key="safeArea" id="0Pu-Ab-oes"/>
                     </view>
                     <connections>
-                        <outlet property="lblConcluido" destination="JZD-f4-tm1" id="Ggt-nv-Urt"/>
                         <outlet property="lblDescricao" destination="3pJ-I1-L8A" id="bbb-5u-Gbd"/>
+                        <outlet property="lblHora" destination="kiQ-DU-8XB" id="NJh-5g-vMs"/>
+                        <outlet property="lblLocal" destination="Iko-Cp-J6e" id="mfT-Mk-9wc"/>
                         <outlet property="lblTtitulo" destination="TNM-OC-yG7" id="OXH-H2-2EW"/>
                     </connections>
                 </viewController>

@@ -9,7 +9,7 @@
 import UIKit
 
 class AddPopUpViewController: UIViewController {
-
+    
     
     @IBOutlet weak var btnAddCompromisso: UIButton!
     @IBOutlet weak var btnAddTarefa: UIButton!
@@ -51,5 +51,5 @@ class AddPopUpViewController: UIViewController {
             }
         })
     }
-
+    
 }
