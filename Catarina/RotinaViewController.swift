@@ -98,15 +98,6 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
-    @IBAction func addButton(_ sender: Any) {
-        refreshInterface()
-        }
-
-    func refreshInterface() {
-        let addViewController = self.storyboard?.instantiateViewController(withIdentifier: "addViewController") as! AddPopUpViewController
-    
-        self.present(addViewController, animated: true, completion: nil)
-    }
 }
 
 

@@ -107,7 +107,7 @@
                     <navigationItem key="navigationItem" title="Rotina" id="Ecm-wt-l4P">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Muh-jT-IT1">
                             <connections>
-                                <action selector="addButton:" destination="BYZ-38-t0r" id="OEj-vX-r3w"/>
+                                <segue destination="Uyo-lP-acH" kind="show" id="TA0-gV-fMr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -127,20 +127,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfY-PI-r33" userLabel="btnAddTarefa">
-                                <rect key="frame" x="116" y="251" width="183" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Adicionar uma tarefa ">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="AddTarefa:" destination="Uyo-lP-acH" eventType="touchUpInside" id="CK3-Ay-McP"/>
-                                    <action selector="addTarefa:" destination="Uyo-lP-acH" eventType="touchUpInside" id="DDm-5h-VuT"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGD-Q8-Ylr" userLabel="btnAddCompromisso">
-                                <rect key="frame" x="89" y="175" width="236" height="36"/>
+                                <rect key="frame" x="89" y="237" width="236" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Adicionar um compromisso">
@@ -148,6 +136,19 @@
                                 </state>
                                 <connections>
                                     <action selector="addCompromisso:" destination="Uyo-lP-acH" eventType="touchUpInside" id="EGE-u4-Ljg"/>
+                                    <segue destination="Nd1-eB-p65" kind="show" id="lzG-yl-cje"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfY-PI-r33" userLabel="btnAddTarefa">
+                                <rect key="frame" x="116" y="193" width="183" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Adicionar uma tarefa ">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addTarefa:" destination="Uyo-lP-acH" eventType="touchUpInside" id="DDm-5h-VuT"/>
+                                    <segue destination="EMW-7o-R7L" kind="show" id="cG8-jK-yCy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -244,7 +245,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vsf-QN-hJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3811.594202898551" y="-995.08928571428567"/>
+            <point key="canvasLocation" x="3064" y="-234"/>
         </scene>
         <!--Rotina-->
         <scene sceneID="pvq-cT-1bh">
@@ -294,6 +295,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GMP-NO-zRE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1805" y="-298"/>
+        </scene>
+        <!--Tarefa Form View Controller-->
+        <scene sceneID="myg-Vk-9bd">
+            <objects>
+                <viewController id="EMW-7o-R7L" customClass="TarefaFormViewController" customModule="Catarina" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IsW-Ts-4zR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="lyX-fR-it8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4fs-5p-zGI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4138" y="-1357"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5O7-Kr-J2v">
+            <objects>
+                <viewController id="Nd1-eB-p65" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f7X-gD-w2G">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="qdr-iN-zqi"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XYd-ou-bwY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4138" y="-616"/>
         </scene>
     </scenes>
 </document>
