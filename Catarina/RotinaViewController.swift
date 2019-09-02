@@ -5,17 +5,7 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var tableViewData = [Periodo]()
     @IBOutlet weak var tableView: UITableView!
     
-    @IBAction func addButton(_ sender: Any) {
-        
-        let addOverPopUp = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addPopUpID") as! AddPopUpViewController
-        if(!Singleton.instance.popUpAberto){
-            Singleton.instance.popUpAberto = true
-            self.addChild(addOverPopUp)
-            addOverPopUp.view.frame = self.view.frame
-            self.view.addSubview(addOverPopUp.view)
-            addOverPopUp.didMove(toParent: self)
-        }
-    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -107,4 +97,16 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
         }
     }
+    
+    @IBAction func addButton(_ sender: Any) {
+        refreshInterface()
+        }
+
+    func refreshInterface() {
+        let addViewController = self.storyboard?.instantiateViewController(withIdentifier: "addViewController") as! AddPopUpViewController
+    
+        self.present(addViewController, animated: true, completion: nil)
+    }
 }
+
+
