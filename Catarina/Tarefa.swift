@@ -4,14 +4,19 @@ class Tarefa{
     var titulo:String
     var descricao:String
     var periodo:String
-    //var aberto:Bool
-    var concluido:Bool
+    //var data: NSDate
+    //var horario
+    var local: String
+    var lembrar:Bool
+    var isTarefa: Bool
     
-    init(nTitulo:String,nDescription:String,nPeriodo:String,nConcluido:Bool/*,nAberto:Bool*/) {
+    init(nTitulo:String,nDescription:String,nPeriodo:String, nLembrar: Bool, nLocal: String, nIsTarefa: Bool) {
         self.titulo = nTitulo
         self.descricao = nDescription
         self.periodo = nPeriodo
-        self.concluido = nConcluido
+        self.local = nLocal
+        self.lembrar = nLembrar
+        self.isTarefa = nIsTarefa
     }
     
 }

@@ -1,30 +1,11 @@
-//
-//  RotinaViewController.swift
-//  Catarina
-//
-//  Created by Mariana Beilune Abad on 16/08/19.
-//  Copyright © 2019 Mariana Beilune Abad. All rights reserved.
-//
-
 import UIKit
 
 class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate {
     
     var tableViewData = [Periodo]()
-    
     @IBOutlet weak var tableView: UITableView!
     
-    @IBAction func addButton(_ sender: Any) {
-        
-        let addOverPopUp = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addPopUpID") as! AddPopUpViewController
-        if(!Singleton.instance.popUpAberto){
-            Singleton.instance.popUpAberto = true
-            self.addChild(addOverPopUp)
-            addOverPopUp.view.frame = self.view.frame
-            self.view.addSubview(addOverPopUp.view)
-            addOverPopUp.didMove(toParent: self)
-        }
-    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -38,10 +19,11 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         Singleton.instance.adiconarTarefas(titulo: "Chorar", descricao: "Arrebentar a crianca pra ela chorar", periodo: "Noite", concluido: false)
         Singleton.instance.adiconarTarefas(titulo: "Comer", descricao: "Socar comida na crianca", periodo: "Noite", concluido: false)
         Singleton.instance.adiconarTarefas(titulo: "Dormir", descricao: "Botar pra dormir", periodo: "Noite", concluido: false)
-        Singleton.instance.adiconarCompromisso(titulo: "CompromissoTeste", local: "LocalTeste", observacao: "ObservacaoTeste", lembrar: false, periodo: "Manhã")
+        Singleton.instance.adiconarCompromisso(titulo: "Vacina", descricao: "Dar Vacina", periodo: "Tarde", concluido: false, lembrar: true, local: "Av getulio varguinhas")
         
         let listaPeriodo = Singleton.instance.listaPeriodo
         tableViewData = listaPeriodo
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -58,18 +40,22 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // FECHADOOOOOOOOOOO Manha | Tarde | Noite
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CellPrincipalViewTableViewCell
             cell.lblTitulo.text = tableViewData[indexPath.section].titulo
-            //cell.lblDate.text = tableViewData[indexPath.section].periodo
-            //if tableViewData[indexPath.section].concluido{cell.lblConcluido.text = "Tarefa concluida"}
-            //else{cell.lblConcluido.text = "Tarefa não concluida"}
             return cell
         }
         else {
+            // ABERTOOOOOOOOO Lista de tarefas e compromissos
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellInfo", for: indexPath) as! CellInfoTableViewCell
             
-            cell.LabelTest.text = tableViewData[indexPath.section].vetorTarefas[indexPath.row-1].titulo
+            if (tableViewData[indexPath.section].vetorTarefas[indexPath.row-1].isTarefa){
+                cell.LabelTest.text = tableViewData[indexPath.section].vetorTarefas[indexPath.row-1].titulo
+            }
+            else{
+                cell.LabelTest.text = "*"+tableViewData[indexPath.section].vetorTarefas[indexPath.row-1].titulo
+            }
             return cell
         }
     }
@@ -97,13 +83,30 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 addOverPopUp.view.frame = self.view.frame
                 addOverPopUp.lblTtitulo.text = self.tableViewData[indexPath.section].vetorTarefas[indexPath.row-1].titulo
                 addOverPopUp.lblDescricao.text = self.tableViewData[indexPath.section].vetorTarefas[indexPath.row-1].descricao
-                addOverPopUp.lblConcluido.text = "Tarefa conlcuida"
-                if(!self.tableViewData[indexPath.section].vetorTarefas[indexPath.row-1].concluido){
-                    addOverPopUp.lblConcluido.text = "Tarefa não conlcuida"
+                
+                if !self.tableViewData[indexPath.section].vetorTarefas[indexPath.row-1].isTarefa{
+                    addOverPopUp.lblHora.isHidden = false
+                    addOverPopUp.lblHora.text = "Algum horário"
+                    addOverPopUp.lblLocal.isHidden = false
+                    addOverPopUp.lblLocal.text = "Algum Local"
                 }
+                
+                
                 self.view.addSubview(addOverPopUp.view)
                 addOverPopUp.didMove(toParent: self)
             }
         }
     }
+    
+    @IBAction func addButton(_ sender: Any) {
+        refreshInterface()
+        }
+
+    func refreshInterface() {
+        let addViewController = self.storyboard?.instantiateViewController(withIdentifier: "addViewController") as! AddPopUpViewController
+    
+        self.present(addViewController, animated: true, completion: nil)
+    }
 }
+
+

@@ -16,15 +16,9 @@ class AddPopUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
         self.showAnimate()
     }
     
-    @IBOutlet weak var blurView: UIView!
-    @IBAction func closePopUp(_ sender: Any) {
-        Singleton.instance.popUpAberto = false
-        self.removeAnimate()
-    }
     
     @IBAction func addTarefa(_ sender: Any) {
         
