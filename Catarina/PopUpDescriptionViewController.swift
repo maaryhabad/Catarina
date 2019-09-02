@@ -18,8 +18,8 @@ class PopUpDescriptionViewController: UIViewController {
     
 //    @IBOutlet weak var lblLocal: UILabel!
 //    @IBOutlet weak var lblHora: UILabel!
-//@IBOutlet weak var viewMid: UIView!
-    
+//    @IBOutlet weak var viewMid: UIView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.3)

@@ -1,21 +1,15 @@
 import UIKit
 
-class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate {
+class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate,UICollectionViewDelegate,UICollectionViewDataSource {
+    
+    
     
     var tableViewData = [Periodo]()
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
-    @IBAction func addButton(_ sender: Any) {
-        
-        let addOverPopUp = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addPopUpID") as! AddPopUpViewController
-        if(!Singleton.instance.popUpAberto){
-            Singleton.instance.popUpAberto = true
-            self.addChild(addOverPopUp)
-            addOverPopUp.view.frame = self.view.frame
-            self.view.addSubview(addOverPopUp.view)
-            addOverPopUp.didMove(toParent: self)
-        }
-    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -31,10 +25,32 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         Singleton.instance.adiconarTarefas(titulo: "Dormir", descricao: "Botar pra dormir", periodo: "Noite", concluido: false)
         Singleton.instance.adiconarCompromisso(titulo: "Vacina", descricao: "Dar Vacina", periodo: "Tarde", concluido: false, lembrar: true, local: "Av getulio varguinhas")
         
-        let listaPeriodo = Singleton.instance.listaPeriodo
+        let listaPeriodo = Singleton.instance.listaDia[0].listaPeriodo
         tableViewData = listaPeriodo
         
     }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        <#code#>
+    }
+    
+    
+    @IBAction func addButton(_ sender: Any) {
+        
+        let addOverPopUp = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addPopUpID") as! AddPopUpViewController
+        if(!Singleton.instance.popUpAberto){
+            Singleton.instance.popUpAberto = true
+            self.addChild(addOverPopUp)
+            addOverPopUp.view.frame = self.view.frame
+            self.view.addSubview(addOverPopUp.view)
+            addOverPopUp.didMove(toParent: self)
+        }
+    }
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return tableViewData.count
