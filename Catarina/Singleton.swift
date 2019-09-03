@@ -10,7 +10,7 @@ class Singleton{
     var listaDia: [Dia] = [Dia.init(listaPeriodo: [Periodo.init(nTitulo: "Manhã", tarefas: [] , nAberto: false),
                                                    Periodo.init(nTitulo: "Tarde", tarefas: [] , nAberto: false),
                                                    Periodo.init(nTitulo: "Noite", tarefas: [] , nAberto: false)], numDia: 1, strDia: "Segunda")]
-    var nucleoFamiliar: [Familia] = []
+
 //    var listaPeriodo:[Periodo] = [Periodo.init(nTitulo: "Manhã", tarefas: [] , nAberto: false),
 //                                  Periodo.init(nTitulo: "Tarde", tarefas: [] , nAberto: false),
 //                                  Periodo.init(nTitulo: "Noite", tarefas: [] , nAberto: false)]
