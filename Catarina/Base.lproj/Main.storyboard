@@ -366,10 +366,10 @@
             </objects>
             <point key="canvasLocation" x="4138" y="-1357"/>
         </scene>
-        <!--View Controller-->
+        <!--Compromisso View Controller-->
         <scene sceneID="5O7-Kr-J2v">
             <objects>
-                <viewController id="Nd1-eB-p65" sceneMemberID="viewController">
+                <viewController id="Nd1-eB-p65" customClass="CompromissoViewController" customModule="Catarina" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f7X-gD-w2G">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -24,8 +24,7 @@ class TarefaFormViewController: FormViewController {
                 $0.options = ["Manhã", "Tarde", "Noite"]
             }
             <<< TextRow() {
-                $0.title = "Nome"
-                $0.placeholder = "Nome do responsável"
+                $0.title = "Responsável"
         }
         
     }
