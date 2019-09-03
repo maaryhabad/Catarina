@@ -203,11 +203,6 @@
 				01A0113E230EC5AB00BEC469 /* Singleton.swift */,
 				E84FDA6823140225009EC0CF /* Compromisso.swift */,
 				E84FDA6A2314028D009EC0CF /* Periodo.swift */,
-				6C3802EF23141CCE00E5A6D4 /* FamiliaFormPopUpViewController.swift */,
-				6C3802F12316A42E00E5A6D4 /* FamiliaSingleton.swift */,
-				6C3802F32316A4B000E5A6D4 /* Familia.swift */,
-				6C3802F52316A7AF00E5A6D4 /* FamiliaViewController.swift */,
-				6C3802F72316BC9A00E5A6D4 /* FamiliaViewCell.swift */,
 				FB10815D2316AEA000E469FE /* PopUpDescriptionViewController.swift */,
 				CDC2C6F22316BBB2007AC928 /* Compartilhar.swift */,
 				6C90E733231D49330098C420 /* TarefaFormViewController.swift */,
@@ -463,8 +458,6 @@
 				CD994FB523059CF4006E9814 /* ViewController.swift in Sources */,
 				01A0113F230EC5AB00BEC469 /* Singleton.swift in Sources */,
 				CDC2C6F32316BBB2007AC928 /* Compartilhar.swift in Sources */,
-				6C3802F22316A42E00E5A6D4 /* FamiliaSingleton.swift in Sources */,
-				6C3802F62316A7B000E5A6D4 /* FamiliaViewController.swift in Sources */,
 				E84FDA6B2314028D009EC0CF /* Periodo.swift in Sources */,
 				6C90E734231D49330098C420 /* TarefaFormViewController.swift in Sources */,
 				CD719B2B2306EE9600E027CB /* RotinaViewController.swift in Sources */,
@@ -472,7 +465,6 @@
 				CD44AFA82316A4C400D6E8E3 /* PlaylistCollectionViewCell.swift in Sources */,
 				FBD6408D230D870000B5DD8B /* Tarefa.swift in Sources */,
 				CD994FB323059CF4006E9814 /* AppDelegate.swift in Sources */,
-				6C3802F42316A4B000E5A6D4 /* Familia.swift in Sources */,
 				FB10815E2316AEA000E469FE /* PopUpDescriptionViewController.swift in Sources */,
 				FBD6408B230D7FCA00B5DD8B /* CellInfoTableViewCell.swift in Sources */,
 				CD44AFA92316A4C400D6E8E3 /* PlaylistViewController.swift in Sources */,
@@ -482,7 +474,6 @@
 				CD44AFA72316A4C400D6E8E3 /* PlaylistModel.swift in Sources */,
 				01608E15231D59150078BD7A /* Dia.swift in Sources */,
 				CD44AFA62316A4C400D6E8E3 /* Playlists.swift in Sources */,
-				6C3802F023141CCE00E5A6D4 /* FamiliaFormPopUpViewController.swift in Sources */,
 				01A0113D230EBF0F00BEC469 /* CellPrincipalViewTableViewCell.swift in Sources */,
 				E84FDA6923140225009EC0CF /* Compromisso.swift in Sources */,
 			);
@@ -661,7 +652,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MK55QVZ894;
+				DEVELOPMENT_TEAM = F6XL2RL8RU;
 				INFOPLIST_FILE = Catarina/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -681,7 +672,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MK55QVZ894;
+				DEVELOPMENT_TEAM = F6XL2RL8RU;
 				INFOPLIST_FILE = Catarina/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -7,13 +7,15 @@ class Singleton{
     var popUpAberto = false
     var popUpDescricaoAberto = false
     private init(){}
+    var diaSelecionado: Dia!
     var listaDia: [Dia] = [Dia.init(listaPeriodo: [Periodo.init(nTitulo: "Manhã", tarefas: [] , nAberto: false),
                                                    Periodo.init(nTitulo: "Tarde", tarefas: [] , nAberto: false),
-                                                   Periodo.init(nTitulo: "Noite", tarefas: [] , nAberto: false)], numDia: 1, strDia: "Segunda")]
+                                                   Periodo.init(nTitulo: "Noite", tarefas: [] , nAberto: false)], numDia: 1, strDia: "Segunda"),
+                           Dia.init(listaPeriodo: [Periodo.init(nTitulo: "Manhã", tarefas: [] , nAberto: false),
+                                                   Periodo.init(nTitulo: "Tarde", tarefas: [] , nAberto: false),
+                                                   Periodo.init(nTitulo: "Noite", tarefas: [] , nAberto: false)], numDia: 2, strDia: "Terça")
+    ]
 
-//    var listaPeriodo:[Periodo] = [Periodo.init(nTitulo: "Manhã", tarefas: [] , nAberto: false),
-//                                  Periodo.init(nTitulo: "Tarde", tarefas: [] , nAberto: false),
-//                                  Periodo.init(nTitulo: "Noite", tarefas: [] , nAberto: false)]
     var userid: String!
     
     func adiconarTarefas(titulo:String,descricao:String,periodo:String,concluido:Bool) {

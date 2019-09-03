@@ -9,6 +9,7 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var collectionView: UICollectionView!
     
     
+    var collectionViewData = [Dia]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,19 +29,28 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         Singleton.instance.adiconarCompromisso(titulo: "Vacina", descricao: "Dar Vacina", periodo: "Tarde", concluido: false, lembrar: true, local: "Av getulio varguinhas")
         let listaPeriodo = Singleton.instance.listaDia[0].listaPeriodo
         tableViewData = listaPeriodo
+        collectionViewData = Singleton.instance.listaDia
         
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return collectionViewData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellDias", for: indexPath) as! CellCollectionDays
             cell.image.image = UIImage(named: "test")
+            print(collectionViewData[indexPath.row].strDia)
             return cell
-        
+        //montar os dias
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            print("CELULA SELECIONADA", collectionViewData[indexPath.row].strDia)
+            Singleton.instance.diaSelecionado = collectionViewData[indexPath.row]
+            tableViewData = collectionViewData[indexPath.row].listaPeriodo
+            tableView.reloadData()
     }
     
     

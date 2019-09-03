@@ -1,11 +1,3 @@
-//
-//  PlaylistCollectionViewCell.swift
-//  Catarina
-//
-//  Created by Mariana Beilune Abad on 26/08/19.
-//  Copyright © 2019 Mariana Beilune Abad. All rights reserved.
-//
-
 import UIKit
 
 class PlaylistCollectionViewCell: UICollectionViewCell {
