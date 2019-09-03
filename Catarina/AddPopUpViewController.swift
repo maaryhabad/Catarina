@@ -9,7 +9,7 @@
 import UIKit
 
 class AddPopUpViewController: UIViewController {
-
+    
     
     @IBOutlet weak var btnAddCompromisso: UIButton!
     @IBOutlet weak var btnAddTarefa: UIButton!
@@ -19,6 +19,11 @@ class AddPopUpViewController: UIViewController {
         // self.showAnimate()
     }
     
+    @IBOutlet weak var blurView: UIView!
+    @IBAction func closePopUp(_ sender: Any) {
+        Singleton.instance.popUpAberto = false
+        self.removeAnimate()
+    }
     
     @IBAction func addTarefa(_ sender: Any) {
         
@@ -45,5 +50,5 @@ class AddPopUpViewController: UIViewController {
             }
         })
     }
-
+    
 }

@@ -1,15 +1,21 @@
 import UIKit
 
-class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate {
+class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationControllerDelegate,UICollectionViewDelegate,UICollectionViewDataSource {
+    
+    
     
     var tableViewData = [Periodo]()
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        collectionView.delegate = self
+        collectionView.dataSource = self
         Singleton.instance.adiconarTarefas(titulo: "Acordar", descricao: "Acordar a crianca", periodo: "Manhã", concluido: false)
         Singleton.instance.adiconarTarefas(titulo: "Amamentar", descricao: "Botar pra mamar", periodo: "Manhã", concluido: false)
         Singleton.instance.adiconarTarefas(titulo: "Fazer coco", descricao: "Cagar na crianca", periodo: "Manhã", concluido: false)
@@ -20,11 +26,36 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         Singleton.instance.adiconarTarefas(titulo: "Comer", descricao: "Socar comida na crianca", periodo: "Noite", concluido: false)
         Singleton.instance.adiconarTarefas(titulo: "Dormir", descricao: "Botar pra dormir", periodo: "Noite", concluido: false)
         Singleton.instance.adiconarCompromisso(titulo: "Vacina", descricao: "Dar Vacina", periodo: "Tarde", concluido: false, lembrar: true, local: "Av getulio varguinhas")
-        
-        let listaPeriodo = Singleton.instance.listaPeriodo
+        let listaPeriodo = Singleton.instance.listaDia[0].listaPeriodo
         tableViewData = listaPeriodo
         
     }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 7
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellDias", for: indexPath) as! CellCollectionDays
+            cell.image.image = UIImage(named: "test")
+            return cell
+        
+    }
+    
+    
+    @IBAction func addButton(_ sender: Any) {
+        
+        let addOverPopUp = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addPopUpID") as! AddPopUpViewController
+        if(!Singleton.instance.popUpAberto){
+            Singleton.instance.popUpAberto = true
+            self.addChild(addOverPopUp)
+            addOverPopUp.view.frame = self.view.frame
+            self.view.addSubview(addOverPopUp.view)
+            addOverPopUp.didMove(toParent: self)
+        }
+    }
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return tableViewData.count
@@ -99,5 +130,3 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     
 }
-
-

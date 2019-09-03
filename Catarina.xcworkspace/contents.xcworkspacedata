@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Catarina/Base.lproj/OutraFamilia.storyboard">
-   </FileRef>
-   <FileRef
       location = "group:Catarina.xcodeproj">
    </FileRef>
    <FileRef

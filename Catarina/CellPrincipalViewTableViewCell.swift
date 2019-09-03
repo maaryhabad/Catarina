@@ -9,7 +9,7 @@
 import UIKit
 
 class CellPrincipalViewTableViewCell: UITableViewCell {
-
+    
     
     @IBOutlet weak var lblTitulo: UILabel!
     @IBOutlet weak var lblDate: UILabel!
@@ -19,11 +19,11 @@ class CellPrincipalViewTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
 }
