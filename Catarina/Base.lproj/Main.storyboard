@@ -164,7 +164,7 @@
         <scene sceneID="oy8-ec-Kfm">
             <objects>
                 <viewController storyboardIdentifier="addPopUpID" id="Uyo-lP-acH" customClass="AddPopUpViewController" customModule="Catarina" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zAn-v3-8qR">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="zAn-v3-8qR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -195,19 +195,18 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fnK-9g-w8a" firstAttribute="width" secondItem="zAn-v3-8qR" secondAttribute="width" id="0xT-zI-Y8v"/>
-                            <constraint firstItem="fnK-9g-w8a" firstAttribute="height" secondItem="zAn-v3-8qR" secondAttribute="height" id="1E6-ZP-9iz"/>
-                            <constraint firstItem="fnK-9g-w8a" firstAttribute="centerY" secondItem="2Bs-YM-JnB" secondAttribute="centerY" id="6fs-Ji-EbS"/>
-                            <constraint firstItem="qel-Ru-COj" firstAttribute="height" secondItem="2Bs-YM-JnB" secondAttribute="height" multiplier="0.6" id="CZQ-tc-nEy"/>
-                            <constraint firstItem="qel-Ru-COj" firstAttribute="width" secondItem="2Bs-YM-JnB" secondAttribute="width" multiplier="0.7" id="CqW-Zt-Jzu"/>
-                            <constraint firstItem="qel-Ru-COj" firstAttribute="centerY" secondItem="zAn-v3-8qR" secondAttribute="centerY" id="CvJ-SN-Efo"/>
-                            <constraint firstItem="qel-Ru-COj" firstAttribute="centerX" secondItem="zAn-v3-8qR" secondAttribute="centerX" id="Ow9-8J-M8i"/>
-                            <constraint firstItem="fnK-9g-w8a" firstAttribute="centerX" secondItem="2Bs-YM-JnB" secondAttribute="centerX" id="rSv-hq-NaD"/>
+                            <constraint firstAttribute="width" secondItem="zAn-v3-8qR" secondAttribute="width" id="0xT-zI-Y8v"/>
+                            <constraint firstAttribute="height" secondItem="zAn-v3-8qR" secondAttribute="height" id="1E6-ZP-9iz"/>
+                            <constraint firstAttribute="centerY" secondItem="2Bs-YM-JnB" secondAttribute="centerY" id="6fs-Ji-EbS"/>
+                            <constraint firstAttribute="height" secondItem="2Bs-YM-JnB" secondAttribute="height" multiplier="0.6" id="CZQ-tc-nEy"/>
+                            <constraint firstAttribute="width" secondItem="2Bs-YM-JnB" secondAttribute="width" multiplier="0.7" id="CqW-Zt-Jzu"/>
+                            <constraint firstAttribute="centerY" secondItem="zAn-v3-8qR" secondAttribute="centerY" id="CvJ-SN-Efo"/>
+                            <constraint firstAttribute="centerX" secondItem="zAn-v3-8qR" secondAttribute="centerX" id="Ow9-8J-M8i"/>
+                            <constraint firstAttribute="centerX" secondItem="2Bs-YM-JnB" secondAttribute="centerX" id="rSv-hq-NaD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2Bs-YM-JnB"/>
                     </view>
                     <connections>
-                        <outlet property="blurView" destination="fnK-9g-w8a" id="OJI-YM-23i"/>
                         <outlet property="btnAddCompromisso" destination="QGD-Q8-Ylr" id="y1m-Nf-DnG"/>
                         <outlet property="btnAddTarefa" destination="nfY-PI-r33" id="xwT-1U-dOO"/>
                     </connections>
