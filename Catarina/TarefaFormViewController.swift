@@ -1,11 +1,3 @@
-//
-//  TarefaFormViewController.swift
-//  Catarina
-//
-//  Created by Pyettra Ferreira on 02/09/19.
-//  Copyright © 2019 Mariana Beilune Abad. All rights reserved.
-//
-
 import Eureka
 
 class TarefaFormViewController: FormViewController {
@@ -34,11 +26,13 @@ class TarefaFormViewController: FormViewController {
     func save() -> Tarefa {
         let formValues = form.values()
         
-        let titulo = formValues["titulo"] as? String
-        let periodo = formValues["periodo"] as? String
-        let responsavel = formValues["responsavel"] as? String
+        let titulo = formValues["titulo"] as! String
+        let periodo = formValues["periodo"] as! String
+        let responsavel = formValues["responsavel"] as! String
         
-        let tarefa = Tarefa(nTitulo: titulo!, nDescription: "", nPeriodo: periodo!, nLembrar: false, nLocal: "", nIsTarefa: true, responsavel: responsavel!)
+        
+        let tarefa = Tarefa.init(nTitulo: titulo, nPeriodo: periodo, nLembrar: false, nLocal: "", nIsTarefa: true, responsavel: responsavel, nSegunda: false, nTerca: false, nQuarta: false, nQuinta: false, nSexta: false, nSabado: false, nDomingo: false)
+        
         
         return tarefa
         
