@@ -19,7 +19,7 @@ class Singleton{
     var userid: String!
     
     func adiconarTarefas(titulo:String,descricao:String,periodo:String,responsavel: String, concluido:Bool) {
-        let vTarefa = Tarefa.init(nTitulo: titulo, nDescription: descricao, nPeriodo: periodo, nLembrar: false, nLocal: "", nIsTarefa: true, responsavel: <#String#>)
+        let vTarefa = Tarefa.init(nTitulo: titulo, nDescription: descricao, nPeriodo: periodo, nLembrar: false, nLocal: "", nIsTarefa: true, responsavel: responsavel)
         if(vTarefa.periodo == "Manhã"){
             listaDia[0].listaPeriodo[0].vetorTarefas.append(vTarefa)
         }
