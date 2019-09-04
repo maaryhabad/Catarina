@@ -8,6 +8,13 @@ class Singleton{
     var popUpDescricaoAberto = false
     private init(){}
     var diaSelecionado: Dia!
+    
+    
+  
+
+    
+    
+    
     var listaDia: [Dia] = [Dia.init(listaPeriodo: [Periodo.init(nTitulo: "Manhã", tarefas: [] , nAberto: false),
                                                    Periodo.init(nTitulo: "Tarde", tarefas: [] , nAberto: false),
                                                    Periodo.init(nTitulo: "Noite", tarefas: [] , nAberto: false)], numDia: 1, strDia: "Segunda"),
@@ -18,8 +25,8 @@ class Singleton{
 
     var userid: String!
     
-    func adiconarTarefas(titulo:String,descricao:String,periodo:String,responsavel: String, concluido:Bool) {
-        let vTarefa = Tarefa.init(nTitulo: titulo, nDescription: descricao, nPeriodo: periodo, nLembrar: false, nLocal: "", nIsTarefa: true, responsavel: <#String#>)
+    func adiconarTarefas(titulo:String,descricao:String,periodo:String,responsavel: String, concluido:Bool,nResponsavel:String) {
+        let vTarefa = Tarefa.init(nTitulo: titulo, nDescription: descricao, nPeriodo: periodo, nLembrar: true, nLocal: "", nIsTarefa: true, responsavel: "")
         if(vTarefa.periodo == "Manhã"){
             listaDia[0].listaPeriodo[0].vetorTarefas.append(vTarefa)
         }

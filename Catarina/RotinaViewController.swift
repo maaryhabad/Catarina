@@ -17,19 +17,25 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.dataSource = self
         collectionView.delegate = self
         collectionView.dataSource = self
-        Singleton.instance.adiconarTarefas(titulo: "Acordar", descricao: "Acordar a crianca", periodo: "Manhã", concluido: false)
-        Singleton.instance.adiconarTarefas(titulo: "Amamentar", descricao: "Botar pra mamar", periodo: "Manhã", concluido: false)
-        Singleton.instance.adiconarTarefas(titulo: "Fazer coco", descricao: "Cagar na crianca", periodo: "Manhã", concluido: false)
-        Singleton.instance.adiconarTarefas(titulo: "Passear", descricao: "Sair pra passear", periodo: "Tarde", concluido: false)
-        Singleton.instance.adiconarTarefas(titulo: "Brincar", descricao: "Sair pra brincar", periodo: "Tarde", concluido: false)
-        Singleton.instance.adiconarTarefas(titulo: "Tomar sol", descricao: "Torrar a criança no sol", periodo: "Tarde", concluido: false)
-        Singleton.instance.adiconarTarefas(titulo: "Chorar", descricao: "Arrebentar a crianca pra ela chorar", periodo: "Noite", concluido: false)
-        Singleton.instance.adiconarTarefas(titulo: "Comer", descricao: "Socar comida na crianca", periodo: "Noite", concluido: false)
-        Singleton.instance.adiconarTarefas(titulo: "Dormir", descricao: "Botar pra dormir", periodo: "Noite", concluido: false)
-        Singleton.instance.adiconarCompromisso(titulo: "Vacina", descricao: "Dar Vacina", periodo: "Tarde", concluido: false, lembrar: true, local: "Av getulio varguinhas")
+        Singleton.instance.adiconarTarefas(titulo: "Acordar", descricao: "Acordar a crianca", periodo: "Manhã", responsavel: "Mãe", concluido: false,nResponsavel: "Mãe")
+        Singleton.instance.adiconarTarefas(titulo: "Amamentar", descricao: "Botar pra mamar", periodo: "Manhã", responsavel: "Mãe", concluido: false,nResponsavel: "Mãe")
+        Singleton.instance.adiconarTarefas(titulo: "Fazer coco", descricao: "Cagar na crianca", periodo: "Manhã", responsavel: "Mãe", concluido: false,nResponsavel: "Mãe")
+        Singleton.instance.adiconarTarefas(titulo: "Passear", descricao: "Sair pra passear", periodo: "Tarde", responsavel: "Mãe", concluido: false,nResponsavel: "Mãe")
+        Singleton.instance.adiconarTarefas(titulo: "Brincar", descricao: "Sair pra brincar", periodo: "Tarde", responsavel: "Mãe", concluido: false,nResponsavel: "Mãe")
+        Singleton.instance.adiconarTarefas(titulo: "Tomar sol", descricao: "Torrar a criança no sol", periodo: "Tarde", responsavel: "Mãe", concluido: false,nResponsavel: "Mãe")
+        Singleton.instance.adiconarTarefas(titulo: "Chorar", descricao: "Arrebentar a crianca pra ela chorar", periodo: "Noite", responsavel: "Mãe", concluido: false,nResponsavel: "Mãe")
+        Singleton.instance.adiconarTarefas(titulo: "Comer", descricao: "Socar comida na crianca", periodo: "Noite", responsavel: "Mãe", concluido: false,nResponsavel: "Mãe")
+        Singleton.instance.adiconarTarefas(titulo: "Dormir", descricao: "Botar pra dormir", periodo: "Noite", responsavel: "Mãe", concluido: false,nResponsavel: "Mãe")
+        Singleton.instance.adiconarCompromisso(titulo: "Vacina", descricao: "Dar Vacina", periodo: "Tarde", concluido: false, lembrar: true, local: "Av getulio varguinhas", responsavel: "Mãe")
         let listaPeriodo = Singleton.instance.listaDia[0].listaPeriodo
         tableViewData = listaPeriodo
         collectionViewData = Singleton.instance.listaDia
+        
+        
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy-HH:mm:ss"
+        let hour = dateFormatter.string(from: date)
         
     }
     
