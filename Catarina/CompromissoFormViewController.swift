@@ -13,24 +13,29 @@ class CompromissoFormViewController: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        form +++ Section("Novo Compromisso")
-        
+        form +++ Section()
             <<< TextRow("titulo") {
                 $0.title = "Compromisso"
-        }
+            }
+            +++ Section()
             <<< TextRow("responsavel") {
-                
                 $0.title = "Responsável"
-        }
-            <<< DatePickerRow("data") {
-                $0.title = "Horário"
-        }
+            }
+            +++ Section()
+            <<< DateInlineRow("data") {
+                $0.title = "Data"
+            }
+            <<< TimeInlineRow("horario") {
+                $0.title = "Horario"
+            }
+            +++ Section()
             <<< TextRow("local") {
                 $0.title = "Local"
-        }
+            }
+            +++ Section()
             <<< SwitchRow("lembrar") {
                 $0.title = "Notificação"
-        }
+            }
     }
 
     
