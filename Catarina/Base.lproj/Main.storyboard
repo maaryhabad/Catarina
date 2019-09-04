@@ -164,7 +164,7 @@
         <scene sceneID="oy8-ec-Kfm">
             <objects>
                 <viewController storyboardIdentifier="addPopUpID" id="Uyo-lP-acH" customClass="AddPopUpViewController" customModule="Catarina" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="zAn-v3-8qR">
+                    <view key="view" contentMode="scaleToFill" id="zAn-v3-8qR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -351,7 +351,7 @@
             </objects>
             <point key="canvasLocation" x="1805" y="-298"/>
         </scene>
-        <!--Tarefa Form View Controller-->
+        <!--Title-->
         <scene sceneID="myg-Vk-9bd">
             <objects>
                 <viewController id="EMW-7o-R7L" customClass="TarefaFormViewController" customModule="Catarina" customModuleProvider="target" sceneMemberID="viewController">
@@ -361,12 +361,15 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lyX-fR-it8"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="bDr-FX-olg">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="wto-Y9-1zV"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4fs-5p-zGI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4138" y="-1357"/>
         </scene>
-        <!--Compromisso View Controller-->
+        <!--Title-->
         <scene sceneID="5O7-Kr-J2v">
             <objects>
                 <viewController id="Nd1-eB-p65" customClass="CompromissoViewController" customModule="Catarina" customModuleProvider="target" sceneMemberID="viewController">
@@ -376,6 +379,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="qdr-iN-zqi"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="5w2-YW-5JY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="WQk-QT-W04"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XYd-ou-bwY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
