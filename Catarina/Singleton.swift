@@ -18,8 +18,8 @@ class Singleton{
 
     var userid: String!
     
-    func adiconarTarefas(titulo:String,descricao:String,periodo:String,concluido:Bool) {
-        let vTarefa = Tarefa.init(nTitulo: titulo, nDescription: descricao, nPeriodo: periodo, nLembrar: false, nLocal: "", nIsTarefa: true)
+    func adiconarTarefas(titulo:String,descricao:String,periodo:String,responsavel: String, concluido:Bool) {
+        let vTarefa = Tarefa.init(nTitulo: titulo, nDescription: descricao, nPeriodo: periodo, nLembrar: false, nLocal: "", nIsTarefa: true, responsavel: <#String#>)
         if(vTarefa.periodo == "Manhã"){
             listaDia[0].listaPeriodo[0].vetorTarefas.append(vTarefa)
         }
@@ -30,8 +30,8 @@ class Singleton{
             listaDia[0].listaPeriodo[2].vetorTarefas.append(vTarefa)
         }
     }
-    func adiconarCompromisso(titulo:String,descricao:String,periodo:String,concluido:Bool, lembrar: Bool,local:String){
-        let vCompromisso = Tarefa.init(nTitulo: titulo, nDescription: descricao, nPeriodo: periodo, nLembrar: lembrar, nLocal: local, nIsTarefa: false)
+    func adiconarCompromisso(titulo:String,descricao:String,periodo:String,concluido:Bool, lembrar: Bool,local:String, responsavel: String){
+        let vCompromisso = Tarefa.init(nTitulo: titulo, nDescription: descricao, nPeriodo: periodo, nLembrar: lembrar, nLocal: local, nIsTarefa: false, responsavel: responsavel)
         if(vCompromisso.periodo == "Manhã"){
             listaDia[0].listaPeriodo[0].vetorTarefas.append(vCompromisso)
         }

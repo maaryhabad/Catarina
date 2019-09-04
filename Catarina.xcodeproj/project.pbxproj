@@ -15,7 +15,7 @@
 		231500B5BC00B77E72948A49 /* Pods_CatarinaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F87034C0FF097D219F54A866 /* Pods_CatarinaUITests.framework */; };
 		571A1898BFF3B486D40C0662 /* Pods_CatarinaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1233A37A595774CDF1357FC6 /* Pods_CatarinaTests.framework */; };
 		6C90E734231D49330098C420 /* TarefaFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C90E733231D49330098C420 /* TarefaFormViewController.swift */; };
-		6C90E736231D741D0098C420 /* CompromissoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C90E735231D741D0098C420 /* CompromissoViewController.swift */; };
+		6C90E736231D741D0098C420 /* CompromissoFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C90E735231D741D0098C420 /* CompromissoFormViewController.swift */; };
 		719F1C8CEF34448DA7E4C7BE /* Pods_Catarina.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 401DC89698A4251D47A84ACE /* Pods_Catarina.framework */; };
 		CD44AFA62316A4C400D6E8E3 /* Playlists.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD44AFA22316A4C200D6E8E3 /* Playlists.swift */; };
 		CD44AFA72316A4C400D6E8E3 /* PlaylistModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD44AFA32316A4C300D6E8E3 /* PlaylistModel.swift */; };
@@ -68,7 +68,7 @@
 		1233A37A595774CDF1357FC6 /* Pods_CatarinaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CatarinaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		401DC89698A4251D47A84ACE /* Pods_Catarina.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Catarina.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C90E733231D49330098C420 /* TarefaFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarefaFormViewController.swift; sourceTree = "<group>"; };
-		6C90E735231D741D0098C420 /* CompromissoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompromissoViewController.swift; sourceTree = "<group>"; };
+		6C90E735231D741D0098C420 /* CompromissoFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompromissoFormViewController.swift; sourceTree = "<group>"; };
 		90E39FC8AB94CD00EEA471AD /* Pods-Catarina.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catarina.debug.xcconfig"; path = "Target Support Files/Pods-Catarina/Pods-Catarina.debug.xcconfig"; sourceTree = "<group>"; };
 		994D34E429B5AF51336D4DAF /* Pods-CatarinaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatarinaTests.debug.xcconfig"; path = "Target Support Files/Pods-CatarinaTests/Pods-CatarinaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6CCADC59982CB345B8EF7BB /* Pods-CatarinaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CatarinaTests.release.xcconfig"; path = "Target Support Files/Pods-CatarinaTests/Pods-CatarinaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -206,7 +206,7 @@
 				FB10815D2316AEA000E469FE /* PopUpDescriptionViewController.swift */,
 				CDC2C6F22316BBB2007AC928 /* Compartilhar.swift */,
 				6C90E733231D49330098C420 /* TarefaFormViewController.swift */,
-				6C90E735231D741D0098C420 /* CompromissoViewController.swift */,
+				6C90E735231D741D0098C420 /* CompromissoFormViewController.swift */,
 				01608E14231D59150078BD7A /* Dia.swift */,
 				01608E16231D5D990078BD7A /* CellCollectionDays.swift */,
 			);
@@ -461,7 +461,7 @@
 				E84FDA6B2314028D009EC0CF /* Periodo.swift in Sources */,
 				6C90E734231D49330098C420 /* TarefaFormViewController.swift in Sources */,
 				CD719B2B2306EE9600E027CB /* RotinaViewController.swift in Sources */,
-				6C90E736231D741D0098C420 /* CompromissoViewController.swift in Sources */,
+				6C90E736231D741D0098C420 /* CompromissoFormViewController.swift in Sources */,
 				CD44AFA82316A4C400D6E8E3 /* PlaylistCollectionViewCell.swift in Sources */,
 				FBD6408D230D870000B5DD8B /* Tarefa.swift in Sources */,
 				CD994FB323059CF4006E9814 /* AppDelegate.swift in Sources */,
