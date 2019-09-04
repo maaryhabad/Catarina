@@ -17,19 +17,27 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.dataSource = self
         collectionView.delegate = self
         collectionView.dataSource = self
-        Singleton.instance.adiconarTarefas(titulo: "Acordar", descricao: "Acordar a crianca", periodo: "Manhã", concluido: false)
-        Singleton.instance.adiconarTarefas(titulo: "Amamentar", descricao: "Botar pra mamar", periodo: "Manhã", concluido: false)
-        Singleton.instance.adiconarTarefas(titulo: "Fazer coco", descricao: "Cagar na crianca", periodo: "Manhã", concluido: false)
-        Singleton.instance.adiconarTarefas(titulo: "Passear", descricao: "Sair pra passear", periodo: "Tarde", concluido: false)
-        Singleton.instance.adiconarTarefas(titulo: "Brincar", descricao: "Sair pra brincar", periodo: "Tarde", concluido: false)
-        Singleton.instance.adiconarTarefas(titulo: "Tomar sol", descricao: "Torrar a criança no sol", periodo: "Tarde", concluido: false)
-        Singleton.instance.adiconarTarefas(titulo: "Chorar", descricao: "Arrebentar a crianca pra ela chorar", periodo: "Noite", concluido: false)
-        Singleton.instance.adiconarTarefas(titulo: "Comer", descricao: "Socar comida na crianca", periodo: "Noite", concluido: false)
-        Singleton.instance.adiconarTarefas(titulo: "Dormir", descricao: "Botar pra dormir", periodo: "Noite", concluido: false)
-        Singleton.instance.adiconarCompromisso(titulo: "Vacina", descricao: "Dar Vacina", periodo: "Tarde", concluido: false, lembrar: true, local: "Av getulio varguinhas")
-        let listaPeriodo = Singleton.instance.listaDia[0].listaPeriodo
-        tableViewData = listaPeriodo
+        
+        Singleton.instance.adiconarTarefas(titulo: "Acordar", periodo: "Manhã",nResponsavel: "Mãe", segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
+        Singleton.instance.adiconarTarefas(titulo: "Amamentar", periodo: "Manhã",nResponsavel: "Mãe", segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
+        Singleton.instance.adiconarTarefas(titulo: "Fazer coco", periodo:"Manhã",nResponsavel: "Mãe", segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
+        Singleton.instance.adiconarTarefas(titulo: "Passear", periodo: "Tarde",nResponsavel: "Mãe", segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
+        Singleton.instance.adiconarTarefas(titulo: "Brincar", periodo: "Tarde",nResponsavel: "Mãe", segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
+        Singleton.instance.adiconarTarefas(titulo: "Tomar sol", periodo: "Tarde",nResponsavel: "Mãe", segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
+        Singleton.instance.adiconarTarefas(titulo: "Chorar", periodo: "Noite",nResponsavel: "Mãe", segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
+        Singleton.instance.adiconarTarefas(titulo: "Comer", periodo: "Noite",nResponsavel: "Mãe", segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
+        Singleton.instance.adiconarTarefas(titulo: "Dormir", periodo: "Noite",nResponsavel: "Mãe", segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
+        //Singleton.instance.adiconarCompromisso(titulo: "Vacina", lembrar: true, local: "Av getulio varguinhas", responsavel: "Mãe", data: Dia)
+        
+        
+        tableViewData = Singleton.instance.listaDia[0].listaPeriodo
         collectionViewData = Singleton.instance.listaDia
+        
+        
+//        let date = Date()
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = "dd.MM.yyyy-HH:mm:ss"
+//        let hour = dateFormatter.string(from: date)
         
     }
     
@@ -41,13 +49,13 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellDias", for: indexPath) as! CellCollectionDays
             cell.image.image = UIImage(named: "test")
-            print(collectionViewData[indexPath.row].strDia)
+           // print(collectionViewData[indexPath.row].strDia)
             return cell
         //montar os dias
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            print("CELULA SELECIONADA", collectionViewData[indexPath.row].strDia)
+            //print("CELULA SELECIONADA", collectionViewData[indexPath.row].strDia)
             Singleton.instance.diaSelecionado = collectionViewData[indexPath.row]
             tableViewData = collectionViewData[indexPath.row].listaPeriodo
             tableView.reloadData()
@@ -123,8 +131,6 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 self.addChild(addOverPopUp)
                 addOverPopUp.view.frame = self.view.frame
                 addOverPopUp.lblTtitulo.text = self.tableViewData[indexPath.section].vetorTarefas[indexPath.row-1].titulo
-                addOverPopUp.lblDescricao.text = self.tableViewData[indexPath.section].vetorTarefas[indexPath.row-1].descricao
-                
                 if !self.tableViewData[indexPath.section].vetorTarefas[indexPath.row-1].isTarefa{
                     addOverPopUp.lblHora.isHidden = false
                     addOverPopUp.lblHora.text = "Algum horário"
