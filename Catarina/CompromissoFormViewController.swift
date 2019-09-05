@@ -12,6 +12,8 @@ import ContactsUI
 
 class CompromissoFormViewController: FormViewController, CNContactPickerDelegate {
     
+    @IBOutlet weak var contactBtn: UIButton!
+    @IBOutlet weak var lbl: UITextField!
     @IBAction func saveBtn(_ sender: UIBarButtonItem) {
         save()
     }
@@ -43,13 +45,32 @@ class CompromissoFormViewController: FormViewController, CNContactPickerDelegate
                 $0.title = "Notificação"
             }
         
-            <<< ActionSheetRow<String>(){
-                $0.title = "AcionSheetRow"
-                $0.options = ["Contatos"]
+            <<< ButtonRow(){
+                $0.title = "Contatos"
+//                $0.onCellSelection(self.contato)
+//
                 
             }
     }
 
+     func contato(_ sender: Any) {
+        let contactVc = CNContactPickerViewController()
+        contactVc.delegate = self
+        self.present(contactVc, animated: true, completion: nil)
+    }
+    
+    func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
+        print(contact.phoneNumbers)
+        
+        let numbers = contact.phoneNumbers.first
+        print((numbers?.value)?.stringValue ?? "")
+        self.lbl.text = "Contact No. \((numbers?.value)?.stringValue ?? "")"
+        
+    }
+    
+    func contactPickerDidCancel(_ picker: CNContactPickerViewController) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     func save() {
         let formValues = form.values()
@@ -64,6 +85,5 @@ class CompromissoFormViewController: FormViewController, CNContactPickerDelegate
         let compromisso = Compromisso(nTitulo: titulo!, nLocal: local!, nObservacao: "", nLembrar: notificacao!, nPeriodo: data!, responsavel: responsavel!)
         
         Singleton.instance.adiconarCompromisso(titulo: titulo!, lembrar: notificacao!, local: local!, responsavel: responsavel!, data: data!)
-        
     }
 }
