@@ -7,8 +7,14 @@
 //
 
 import Eureka
+import UIKit
+import ContactsUI
 
-class CompromissoFormViewController: FormViewController {
+class CompromissoFormViewController: FormViewController, CNContactPickerDelegate {
+    
+    @IBAction func saveBtn(_ sender: UIBarButtonItem) {
+        save()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,21 +42,28 @@ class CompromissoFormViewController: FormViewController {
             <<< SwitchRow("lembrar") {
                 $0.title = "Notificação"
             }
+        
+            <<< ActionSheetRow<String>(){
+                $0.title = "AcionSheetRow"
+                $0.options = ["Contatos"]
+                
+            }
     }
 
     
-    func save() -> Compromisso{
+    func save() {
         let formValues = form.values()
         
         let titulo = formValues["titulo"] as? String
         let responsavel = formValues["responsavel"] as? String
         let data = formValues["data"] as? Date
+        let horario = formValues["horario"] as? Date
         let local = formValues["local"] as? String
         let notificacao = formValues["lembrar"] as? Bool
         
         let compromisso = Compromisso(nTitulo: titulo!, nLocal: local!, nObservacao: "", nLembrar: notificacao!, nPeriodo: data!, responsavel: responsavel!)
         
-        return compromisso
+        Singleton.instance.adiconarCompromisso(titulo: titulo!, lembrar: notificacao!, local: local!, responsavel: responsavel!, data: data!)
         
     }
 }

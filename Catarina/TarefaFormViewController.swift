@@ -2,6 +2,12 @@ import Eureka
 
 class TarefaFormViewController: FormViewController {
     
+    @IBAction func saveBtn(_ sender: UIBarButtonItem) {
+        save()
+        print(form.values())
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,7 +30,7 @@ class TarefaFormViewController: FormViewController {
                 $0.title = "Responsável"
             }
             
-            +++ Section()
+            +++ Section("repete")
             <<< MultipleSelectorRow<String>("repete") {
                 $0.title = "Repetir"
                 $0.options = [
@@ -40,7 +46,7 @@ class TarefaFormViewController: FormViewController {
         
             +++ Section()
             <<< SwitchRow("lembrar") {
-            $0.title = "Lembrar"
+                $0.title = "Lembrar"
         }
         
     }
@@ -51,9 +57,9 @@ class TarefaFormViewController: FormViewController {
         let titulo = formValues["titulo"] as? String
         let periodo = formValues["periodo"] as? String
         let responsavel = formValues["responsavel"] as? String
-        let repetir = formValues["repete"] as? String
         
-        Singleton.instance.adiconarTarefas(titulo: titulo!, descricao: "", periodo: periodo!, responsavel: responsavel!, concluido: true)
+        
+        Singleton.instance.adiconarTarefas(titulo: titulo!, periodo: periodo!, nResponsavel: responsavel!, segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
         
         // colocar a funçao de compartilhamento aqui!!!
         //lembrar : boolean
