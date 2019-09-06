@@ -8,7 +8,6 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    
     var collectionViewData = [Dia]()
     
     override func viewDidLoad() {
@@ -27,17 +26,14 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         Singleton.instance.adiconarTarefas(titulo: "Chorar", periodo: "Noite",nResponsavel: "Mãe", segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
         Singleton.instance.adiconarTarefas(titulo: "Comer", periodo: "Noite",nResponsavel: "Mãe", segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
         Singleton.instance.adiconarTarefas(titulo: "Dormir", periodo: "Noite",nResponsavel: "Mãe", segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
-        //Singleton.instance.adiconarCompromisso(titulo: "Vacina", lembrar: true, local: "Av getulio varguinhas", responsavel: "Mãe", data: Dia)
+        //Singleton.instance.adiconarCompromisso(titulo: "Vacina", lembrar: true, local: "Av Getulio Vargas", responsavel: "Mãe")
+        var date = DateComponents()
         
-        
-        tableViewData = Singleton.instance.listaDia[0].listaPeriodo
+       
+        //tableViewData = Singleton.instance.listaDia[0].listaPeriodo
         collectionViewData = Singleton.instance.listaDia
         
         
-//        let date = Date()
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "dd.MM.yyyy-HH:mm:ss"
-//        let hour = dateFormatter.string(from: date)
         
     }
     
@@ -47,18 +43,44 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellDias", for: indexPath) as! CellCollectionDays
-            cell.image.image = UIImage(named: "test")
-           // print(collectionViewData[indexPath.row].strDia)
-            return cell
-        //montar os dias
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellDias", for: indexPath) as! CellCollectionDays
+        
+        cell.numDia.text = "\(((collectionViewData[indexPath.row].data.day) as! Int))"
+        
+        
+        let dateDate = Calendar(identifier: .gregorian).date(from: collectionViewData[indexPath.row].data)!
+        let numDia  =  Calendar.current.component(.weekday, from: dateDate)
+        
+        switch numDia {
+        case 1:
+            cell.strDia.text = "Dom"
+            
+        case 2:
+            cell.strDia.text = "Seg"
+        case 3:
+            cell.strDia.text = "Ter"
+        case 4:
+            cell.strDia.text = "Qua"
+        case 5:
+            cell.strDia.text = "Qui"
+        case 6:
+            cell.strDia.text = "Sex"
+        case 7:
+            cell.strDia.text = "Sab"
+        default:
+            ""
+        }
+        
+        //cell.strDia.text = strDia
+      
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            //print("CELULA SELECIONADA", collectionViewData[indexPath.row].strDia)
-            Singleton.instance.diaSelecionado = collectionViewData[indexPath.row]
-            tableViewData = collectionViewData[indexPath.row].listaPeriodo
-            tableView.reloadData()
+        Singleton.instance.diaSelecionado = indexPath.row
+        print("dadasdasd ",collectionViewData[indexPath.row].data.day)
+        tableViewData = collectionViewData[indexPath.row].listaPeriodo
+        tableView.reloadData()
     }
     
     
