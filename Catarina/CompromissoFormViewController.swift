@@ -105,6 +105,8 @@ class CompromissoFormViewController: FormViewController, CNContactPickerDelegate
         
         let compromisso = Compromisso(nTitulo: titulo!, nLocal: local!, nObservacao: "", nLembrar: notificacao!, nPeriodo: data!, responsavel: responsavel!)
         
-        Singleton.instance.adiconarCompromisso(titulo: titulo!, lembrar: notificacao!, local: local!, responsavel: responsavel!, data: data!)
+       // Singleton.instance.a
+        
+//        Singleton.instance.adiconarCompromisso(titulo: titulo!, lembrar: notificacao!, local: local!, responsavel: responsavel!, data: data!)
     }
 }

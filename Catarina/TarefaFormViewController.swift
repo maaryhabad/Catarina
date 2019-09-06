@@ -77,12 +77,13 @@ class TarefaFormViewController: FormViewController, CNContactPickerDelegate {
     func save() {
         let formValues = form.values()
 
-        let titulo = formValues["titulo"] as? String
-        let periodo = formValues["periodo"] as? String
-        let responsavel = formValues["responsavel"] as? String
+        let titulo = formValues["titulo"] as! String
+        let periodo = formValues["periodo"] as! String
+        // let responsavel = formValues["responsavel"] as! String
         
         
-        Singleton.instance.adiconarTarefas(titulo: titulo!, periodo: periodo!, nResponsavel: responsavel!, segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
+        Singleton.instance.adiconarTarefas(titulo: titulo, periodo: periodo, nResponsavel: "ddsf", segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
+        //Singleton.instance.adiconarTarefas(titulo: titulo!, periodo: periodo!, nResponsavel: responsavel!, segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
         
         // colocar a funçao de compartilhamento aqui!!!
         //lembrar : boolean
