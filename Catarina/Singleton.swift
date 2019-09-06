@@ -24,7 +24,7 @@ class Singleton{
     }
     var userid: String!
     func adiconarTarefas(titulo:String,periodo:String,nResponsavel:String, segunda: Bool, terca: Bool, quarta: Bool, quinta: Bool, sexta: Bool, sabado: Bool, domingo: Bool ){
-        let vTarefa = Tarefa.init(nTitulo: titulo, nPeriodo: periodo, nLembrar: false, nLocal: "", nIsTarefa: true, responsavel: nResponsavel, nSegunda: segunda, nTerca: terca, nQuarta: quarta, nQuinta: quinta, nSexta: sexta, nSabado: sabado, nDomingo: domingo)
+        let vTarefa = Tarefa.init(nTitulo: titulo, nPeriodo: periodo, nLembrar: false, nLocal: "", nIsTarefa: true, responsavel: nResponsavel, nSegunda: segunda, nTerca: terca, nQuarta: quarta, nQuinta: quinta, nSexta: sexta, nSabado: sabado, nDomingo: domingo, data: Singleton.instance.criarData(dia: 0, mes: 0, ano: 0))
         //titulo,periodo,responsavel,lembrar,repetir
         if(vTarefa.periodo == "Manhã"){
             listaDia[Singleton.instance.diaSelecionado].listaPeriodo[0].vetorTarefas.append(vTarefa)
@@ -36,8 +36,8 @@ class Singleton{
             listaDia[Singleton.instance.diaSelecionado].listaPeriodo[2].vetorTarefas.append(vTarefa)
         }
     }
-    func adiconarCompromisso(titulo:String, lembrar: Bool,local:String, responsavel: String){
-        let vCompromisso = Tarefa.init(nTitulo: titulo, nPeriodo: "", nLembrar: lembrar, nLocal: local, nIsTarefa: false, responsavel: responsavel, nSegunda: false, nTerca: false, nQuarta: false, nQuinta: false, nSexta: false, nSabado: false, nDomingo: false)
+    func adiconarCompromisso(titulo:String, lembrar: Bool,local:String, responsavel: String, periodo:String,data:DateComponents){
+        let vCompromisso = Tarefa.init(nTitulo: titulo, nPeriodo: periodo, nLembrar: lembrar, nLocal: local, nIsTarefa: false, responsavel: responsavel, nSegunda: false, nTerca: false, nQuarta: false, nQuinta: false, nSexta: false, nSabado: false, nDomingo: false, data: data)
         //titulo,responsavel,data,local,lembrar
         if(vCompromisso.periodo == "Manhã"){
             listaDia[Singleton.instance.diaSelecionado].listaPeriodo[0].vetorTarefas.append(vCompromisso)
