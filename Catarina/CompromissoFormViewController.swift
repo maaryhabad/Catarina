@@ -12,6 +12,7 @@ import ContactsUI
 
 class CompromissoFormViewController: FormViewController, CNContactPickerDelegate {
     
+    var selectedContat: String?
     @IBOutlet weak var contactBtn: UIButton!
     @IBOutlet weak var lbl: UITextField!
     @IBAction func saveBtn(_ sender: UIBarButtonItem) {
@@ -44,16 +45,32 @@ class CompromissoFormViewController: FormViewController, CNContactPickerDelegate
             <<< SwitchRow("lembrar") {
                 $0.title = "Notificação"
             }
-        
+            
+            
+            
             <<< ButtonRow(){
                 $0.title = "Contatos"
-//                $0.onCellSelection(self.contato)
-//
-                
+                $0.onCellSelection(self.contato)
+            }
+        
+            <<< LabelRow("contatoName") {
+                $0.title = ""
+                $0.hidden = true
+//                $0.hidden = Condition.function(["contatoName"], { (form) -> Bool in
+//                    return !((form.rowBy(tag: "contatoName") as? LabelRow)?.title == nil ? true : false)
+//                })
+                //                $0.cellUpdate({ (textCell, textRow) in
+                //                    textRow.title = self.selectedContat
+                //                    textRow.hidden = self.selectedContat != nil ? false : true
+                //
+                //                })
+//                $0.cellUpdate({ (cell, row) in
+//                    row.hidden = false
+//                })
             }
     }
 
-     func contato(_ sender: Any) {
+    func contato(cell: ButtonCellOf<String>, row: ButtonRow) {
         let contactVc = CNContactPickerViewController()
         contactVc.delegate = self
         self.present(contactVc, animated: true, completion: nil)
@@ -62,9 +79,13 @@ class CompromissoFormViewController: FormViewController, CNContactPickerDelegate
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
         print(contact.phoneNumbers)
         
-        let numbers = contact.phoneNumbers.first
-        print((numbers?.value)?.stringValue ?? "")
-        self.lbl.text = "Contact No. \((numbers?.value)?.stringValue ?? "")"
+        // let numbers = contact.phoneNumbers.first
+        selectedContat = contact.givenName
+        self.form.rowBy(tag: "contatoName")?.title = selectedContat
+        self.form.rowBy(tag: "contatoName")?.hidden = false
+        self.form.rowBy(tag: "contatoName")?.evaluateHidden()
+        // self.form.rowBy(tag: "contatoName")?.hidden = false
+        self.form.rowBy(tag: "contatoName")?.updateCell()
         
     }
     
