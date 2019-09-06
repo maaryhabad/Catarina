@@ -164,7 +164,7 @@
         <scene sceneID="oy8-ec-Kfm">
             <objects>
                 <viewController storyboardIdentifier="addPopUpID" id="Uyo-lP-acH" customClass="AddPopUpViewController" customModule="Catarina" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="zAn-v3-8qR">
+                    <view key="view" contentMode="scaleToFill" id="zAn-v3-8qR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -358,7 +358,23 @@
                     <view key="view" contentMode="scaleToFill" id="IsW-Ts-4zR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ynZ-IY-gtd">
+                                <rect key="frame" x="0.0" y="88" width="414" height="403"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6fo-t8-64A">
+                                <rect key="frame" x="0.0" y="474" width="414" height="339"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.91764705879999997" green="0.13725490200000001" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ynZ-IY-gtd" firstAttribute="centerX" secondItem="lyX-fR-it8" secondAttribute="centerX" id="BJE-aI-Kyn"/>
+                            <constraint firstItem="ynZ-IY-gtd" firstAttribute="top" secondItem="lyX-fR-it8" secondAttribute="top" id="WlF-OD-r1r"/>
+                            <constraint firstItem="ynZ-IY-gtd" firstAttribute="height" secondItem="IsW-Ts-4zR" secondAttribute="height" multiplier="0.45" id="diN-oz-eYX"/>
+                            <constraint firstItem="ynZ-IY-gtd" firstAttribute="width" secondItem="IsW-Ts-4zR" secondAttribute="width" id="ljH-iG-Scw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lyX-fR-it8"/>
                     </view>
                     <navigationItem key="navigationItem" title="Tarefa" id="bDr-FX-olg">
@@ -371,7 +387,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4fs-5p-zGI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4138" y="-1357"/>
+            <point key="canvasLocation" x="4137.68115942029" y="-1357.3660714285713"/>
         </scene>
         <!--Compromisso-->
         <scene sceneID="Wyk-Tc-huV">

@@ -1,7 +1,8 @@
 import Eureka
+import ContactsUI
 
-class TarefaFormViewController: FormViewController {
-    
+class TarefaFormViewController: FormViewController, CNContactPickerDelegate {
+   
     @IBAction func saveBtn(_ sender: UIBarButtonItem) {
         save()
         print(form.values())
@@ -26,11 +27,6 @@ class TarefaFormViewController: FormViewController {
             }
             
             +++ Section()
-            <<< TextRow("responsavel") {
-                $0.title = "Responsável"
-            }
-            
-            +++ Section("repete")
             <<< MultipleSelectorRow<String>("repete") {
                 $0.title = "Repetir"
                 $0.options = [
@@ -43,13 +39,40 @@ class TarefaFormViewController: FormViewController {
                     "Todo domingo"
                 ]
             }
-        
+            
+            +++ Section()
+            <<< ButtonRow("responsavel") {
+                $0.title = "Contatos"
+                $0.onCellSelection(self.contato)
+                }
+            
             +++ Section()
             <<< SwitchRow("lembrar") {
                 $0.title = "Lembrar"
         }
         
     }
+    
+    func contato(cell: ButtonCellOf<String>, row: ButtonRow) {
+        let contatoVc = CNContactPickerViewController()
+        contatoVc.delegate = self
+        self.present(contatoVc, animated: true, completion: nil)
+    }
+    
+    func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
+        print(contact.phoneNumbers)
+        
+        let numbers = contact.phoneNumbers.first
+        let responsavel = contact.namePrefix
+        self.form.rowBy(tag: "responsavel")?.title = responsavel
+        print((numbers?.value)?.stringValue ?? "")
+        print(responsavel)
+    }
+    
+    func contactPickerDidCancel(_ picker: CNContactPickerViewController) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
     
     func save() {
         let formValues = form.values()
