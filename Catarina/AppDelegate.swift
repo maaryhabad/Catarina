@@ -10,10 +10,12 @@ import UIKit
 import CoreData
 import Firebase
 import UserNotifications
+import FirebaseMessaging
+import FirebaseInstanceID
 
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, MessagingDelegate {
 
     var window: UIWindow?
 
@@ -27,7 +29,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("ID \(uid)")
             self.registerForPushNotifications()
         }
+        application.registerForRemoteNotifications()
         return true
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        print(userInfo)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -125,9 +132,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
         ) {
-        let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
-        let token = tokenParts.joined()
-        print("Device Token: \(token)")
+//        let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
+//        let token = tokenParts.joined()
+        Messaging.messaging().apnsToken = deviceToken
+        print("Device Token: \(deviceToken)")
+        
     }
     
     func application(
