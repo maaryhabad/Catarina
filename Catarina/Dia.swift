@@ -4,46 +4,17 @@ class Dia{
     
     
     var listaPeriodo:[Periodo]
-    var data:String!
+    var data:DateComponents
+    //var data:String
     
-    
-    
-//    init(listaPeriodo: [Periodo]) {
-//        self.listaPeriodo = listaPeriodo
-//    }
-    
-    init(listaPeriodo: [Periodo],nDate:String) {
+    init(listaPeriodo: [Periodo],nData:DateComponents) {
         self.listaPeriodo = listaPeriodo
-        self.data = nDate
+        self.data = nData
     }
     
-//    func getDiaNumero()-> String{
-//        let date = Date()
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "dd"
-//        return dateFormatter.string(from: date)
-//    }
-//    func getMesNumero()-> String{
-//        let date = Date()
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "mm"
-//        return dateFormatter.string(from: date)
-//    }
-//    func getAnoNumero()-> String{
-//        let date = Date()
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "yyyy"
-//        return dateFormatter.string(from: date)
-//    }
-//    func getAllData()-> String{
-//        let date = Date()
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "dd/MM/yyyy"
-//        return dateFormatter.string(from: date)
-//    }
     
     
-   
-
+    
+    
     
 }
