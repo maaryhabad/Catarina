@@ -33,7 +33,7 @@ class Tarefa{
         self.repetirSexta = nSexta
         self.repetirSabado = nSabado
         self.repetirDomingo = nDomingo
-        self.data=data
+        self.data = data
     }
     
 }

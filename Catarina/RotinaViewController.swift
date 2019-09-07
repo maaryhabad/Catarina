@@ -20,41 +20,19 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.dataSource = self
         collectionView.delegate = self
         collectionView.dataSource = self
-        
-        Singleton.instance.adiconarTarefas(titulo: "Acordar", periodo: "Manhã",nResponsavel: "Mãe", segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
-        Singleton.instance.adiconarTarefas(titulo: "Amamentar", periodo: "Manhã",nResponsavel: "Mãe", segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
-        Singleton.instance.adiconarTarefas(titulo: "Fazer coco", periodo:"Manhã",nResponsavel: "Mãe", segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
-        Singleton.instance.adiconarTarefas(titulo: "Passear", periodo: "Tarde",nResponsavel: "Mãe", segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
-        Singleton.instance.adiconarTarefas(titulo: "Brincar", periodo: "Tarde",nResponsavel: "Mãe", segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
-        Singleton.instance.adiconarTarefas(titulo: "Tomar sol", periodo: "Tarde",nResponsavel: "Mãe", segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
-        Singleton.instance.adiconarTarefas(titulo: "Chorar", periodo: "Noite",nResponsavel: "Mãe", segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
-        Singleton.instance.adiconarTarefas(titulo: "Comer", periodo: "Noite",nResponsavel: "Mãe", segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
-        Singleton.instance.adiconarTarefas(titulo: "Dormir", periodo: "Noite",nResponsavel: "Mãe", segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
-        //Singleton.instance.adiconarCompromisso(titulo: "Vacina", lembrar: true, local: "Av Getulio Vargas", responsavel: "Mãe")
         var date = DateComponents()
-        
-       
-        //tableViewData = Singleton.instance.listaDia[0].listaPeriodo
         collectionViewData = Singleton.instance.listaDia
-        
-        
+        tableViewData = Singleton.instance.listaDia[0].listaPeriodo
         
     }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return collectionViewData.count
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellDias", for: indexPath) as! CellCollectionDays
-        
         cell.numDia.text = "\(((collectionViewData[indexPath.row].data.day) as! Int))"
-        
-        
         let dateDate = Calendar(identifier: .gregorian).date(from: collectionViewData[indexPath.row].data)!
         let numDia  =  Calendar.current.component(.weekday, from: dateDate)
-        
         switch numDia {
         case 1:
             cell.strDia.text = "Dom"
@@ -74,22 +52,14 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         default:
             ""
         }
-        
-        //cell.strDia.text = strDia
-      
         return cell
     }
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         Singleton.instance.diaSelecionado = indexPath.row
-        print("dadasdasd ",collectionViewData[indexPath.row].data.day)
         tableViewData = collectionViewData[indexPath.row].listaPeriodo
         tableView.reloadData()
     }
-    
-    
     @IBAction func addButton(_ sender: Any) {
-        
         let addOverPopUp = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addPopUpID") as! AddPopUpViewController
         if(!Singleton.instance.popUpAberto){
             Singleton.instance.popUpAberto = true
@@ -100,11 +70,9 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         return tableViewData.count
     }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableViewData[section].aberto ==  true {
             return tableViewData[section].vetorTarefas.count + 1

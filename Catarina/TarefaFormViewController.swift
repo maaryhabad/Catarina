@@ -82,7 +82,7 @@ class TarefaFormViewController: FormViewController, CNContactPickerDelegate {
         // let responsavel = formValues["responsavel"] as! String
         
         
-        Singleton.instance.adiconarTarefas(titulo: titulo, periodo: periodo, nResponsavel: "ddsf", segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
+        Singleton.instance.adiconarTarefas(titulo: titulo, periodo: periodo, nResponsavel: "ddsf", segunda: true, terca: false, quarta: false, quinta: false, sexta: false, sabado: false, domingo: false)
         //Singleton.instance.adiconarTarefas(titulo: titulo!, periodo: periodo!, nResponsavel: responsavel!, segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
         
         // colocar a funçao de compartilhamento aqui!!!
