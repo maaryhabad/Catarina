@@ -98,12 +98,13 @@ class CompromissoFormViewController: FormViewController, CNContactPickerDelegate
         
         let titulo = formValues["titulo"] as? String
         let responsavel = formValues["responsavel"] as? String
-        let data = formValues["data"] as? Date
-        let horario = formValues["horario"] as? Date
+        let data = formValues["data"] as? DateComponents
+        let horario = formValues["horario"] as? Date //alterar para periodo
         let local = formValues["local"] as? String
         let notificacao = formValues["lembrar"] as? Bool
         
-        let compromisso = Compromisso(nTitulo: titulo!, nLocal: local!, nObservacao: "", nLembrar: notificacao!, nPeriodo: data!, responsavel: responsavel!)
+//        Singleton.instance.adiconarCompromisso(titulo: titulo, lembrar: notificacao, local: local, responsavel: )
+        
         
        // Singleton.instance.a
         
