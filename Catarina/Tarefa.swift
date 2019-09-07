@@ -14,12 +14,12 @@ class Tarefa{
     var repetirSexta:Bool
     var repetirSabado:Bool
     var repetirDomingo:Bool
+    var data:DateComponents
     
     
     
     
-    
-    init(nTitulo:String,nPeriodo:String, nLembrar: Bool, nLocal: String, nIsTarefa: Bool, responsavel: String, nSegunda: Bool, nTerca: Bool, nQuarta: Bool, nQuinta: Bool, nSexta: Bool, nSabado: Bool, nDomingo: Bool) {
+    init(nTitulo:String,nPeriodo:String, nLembrar: Bool, nLocal: String, nIsTarefa: Bool, responsavel: String, nSegunda: Bool, nTerca: Bool, nQuarta: Bool, nQuinta: Bool, nSexta: Bool, nSabado: Bool, nDomingo: Bool,data:DateComponents) {
         self.titulo = nTitulo
         self.periodo = nPeriodo
         self.local = nLocal
@@ -33,6 +33,7 @@ class Tarefa{
         self.repetirSexta = nSexta
         self.repetirSabado = nSabado
         self.repetirDomingo = nDomingo
+        self.data=data
     }
     
 }
