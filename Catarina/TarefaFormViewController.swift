@@ -20,9 +20,14 @@ class TarefaFormViewController: FormViewController, CNContactPickerDelegate {
                 if (row.value == "Outro") {
                     // open another text row. maybe by calling a function that creates this row?
                 }
+                row.cell.backgroundColor = UIColor(hexString: "F2F1F6")
+                row.cell.textLabel?.font = UIFont(name: "Avenir Next", size: 17)
+                
             }
             <<< SegmentedRow<String>("periodo") {
                 $0.options = ["Manhã", "Tarde", "Noite"]
+                $0.cell.backgroundColor = UIColor(hexString: "F2F1F6")
+                $0.cell.textLabel?.font = UIFont(name: "Avenir Next", size: 17)
             }
             
             <<< MultipleSelectorRow<String>("repete") {
@@ -36,22 +41,32 @@ class TarefaFormViewController: FormViewController, CNContactPickerDelegate {
                     "Todo sábado",
                     "Todo domingo"
                 ]
+                $0.cell.backgroundColor = UIColor(hexString: "F2F1F6")
+                $0.cell.textLabel?.font = UIFont(name: "Avenir Next", size: 17)
             }
             <<< ButtonRow("responsavel") {
                 $0.title = "Contatos"
                 $0.onCellSelection(self.contato)
+                $0.cell.backgroundColor = UIColor(hexString: "F2F1F6")
+                $0.cell.textLabel?.font = UIFont(name: "Avenir Next", size: 17)
                 }
             <<< LabelRow("contatoName") {
                 $0.title = ""
                 $0.hidden = true
+                $0.cell.backgroundColor = UIColor(hexString: "F2F1F6")
+                $0.cell.textLabel?.font = UIFont(name: "Avenir Next", size: 17)
             }
             <<< SwitchRow("lembrar") {
                 $0.title = "Lembrar"
+                $0.cell.backgroundColor = UIColor(hexString: "F2F1F6")
+                $0.cell.textLabel?.font = UIFont(name: "Avenir Next", size: 17)
         }
         
             <<< ButtonRow("salvar") {
                 $0.title = "Salvar"
                 $0.onCellSelection(self.save)
+                $0.cell.backgroundColor = UIColor(hexString: "F2F1F6")
+                $0.cell.textLabel?.font = UIFont(name: "Avenir Next", size: 17)
         }
          self.tableView.separatorStyle = .none
     }
