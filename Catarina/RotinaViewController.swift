@@ -24,8 +24,7 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         collectionViewData = Singleton.instance.listaDia
         tableViewData = Singleton.instance.listaDia[0].listaPeriodo
         
-        let imagem = UIImage(named: "navBar.png")
-        self.navigationController?.navigationBar.setBackgroundImage(imagem, for: .default)
+        self.tableView.separatorStyle = .none
         
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -33,6 +32,7 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellDias", for: indexPath) as! CellCollectionDays
+        
         cell.numDia.text = "\(((collectionViewData[indexPath.row].data.day) as! Int))"
         let dateDate = Calendar(identifier: .gregorian).date(from: collectionViewData[indexPath.row].data)!
         let numDia  =  Calendar.current.component(.weekday, from: dateDate)
@@ -58,9 +58,13 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! CellCollectionDays
+        
+        cell.imgDay.image = UIImage(named: "RectangleCollection")
         Singleton.instance.diaSelecionado = indexPath.row
         tableViewData = collectionViewData[indexPath.row].listaPeriodo
         tableView.reloadData()
+
     }
     @IBAction func addButton(_ sender: Any) {
         let addOverPopUp = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addPopUpID") as! AddPopUpViewController
@@ -90,6 +94,18 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CellPrincipalViewTableViewCell
             cell.lblTitulo.text = tableViewData[indexPath.section].titulo
+            
+//            cell.lblTitulo.font = UIFont(name: "Avenir", size: CGFloat(exactly: 22) ?? 22)
+            
+            if tableViewData[indexPath.section].titulo == "Manhã" {
+                cell.imgPeriodo.image = UIImage(named: "iconeManha")
+                
+            } else if tableViewData[indexPath.section].titulo == "Tarde" {
+                cell.imgPeriodo.image = UIImage(named: "iconeTarde")
+            } else {
+                cell.imgPeriodo.image = UIImage(named: "iconeNoite")
+            }
+            
             return cell
         }
         else {

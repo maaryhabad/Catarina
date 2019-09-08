@@ -14,6 +14,7 @@ class CellPrincipalViewTableViewCell: UITableViewCell {
     @IBOutlet weak var lblTitulo: UILabel!
     @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var lblConcluido: UILabel!
+    @IBOutlet weak var imgPeriodo: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
