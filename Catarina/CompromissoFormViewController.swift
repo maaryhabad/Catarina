@@ -10,14 +10,10 @@ import Eureka
 import UIKit
 import ContactsUI
 
+
 class CompromissoFormViewController: FormViewController, CNContactPickerDelegate {
     
     var selectedContat: String?
-    @IBOutlet weak var contactBtn: UIButton!
-    @IBOutlet weak var lbl: UITextField!
-    @IBAction func saveBtn(_ sender: UIBarButtonItem) {
-        save()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,48 +22,33 @@ class CompromissoFormViewController: FormViewController, CNContactPickerDelegate
             <<< TextRow("titulo") {
                 $0.title = "Compromisso"
             }
-            +++ Section()
-            <<< TextRow("responsavel") {
-                $0.title = "Responsável"
-            }
-            +++ Section()
             <<< DateInlineRow("data") {
                 $0.title = "Data"
             }
             <<< TimeInlineRow("horario") {
                 $0.title = "Horario"
             }
-            +++ Section()
             <<< TextRow("local") {
                 $0.title = "Local"
             }
-            +++ Section()
             <<< SwitchRow("lembrar") {
                 $0.title = "Notificação"
             }
-            
-            
             
             <<< ButtonRow(){
                 $0.title = "Contatos"
                 $0.onCellSelection(self.contato)
             }
-        
             <<< LabelRow("contatoName") {
                 $0.title = ""
                 $0.hidden = true
-//                $0.hidden = Condition.function(["contatoName"], { (form) -> Bool in
-//                    return !((form.rowBy(tag: "contatoName") as? LabelRow)?.title == nil ? true : false)
-//                })
-                //                $0.cellUpdate({ (textCell, textRow) in
-                //                    textRow.title = self.selectedContat
-                //                    textRow.hidden = self.selectedContat != nil ? false : true
-                //
-                //                })
-//                $0.cellUpdate({ (cell, row) in
-//                    row.hidden = false
-//                })
             }
+        
+        <<<
+            ButtonRow("salvar") {
+                $0.title = "Salvar"
+                $0.onCellSelection(self.save)
+        }
     }
 
     func contato(cell: ButtonCellOf<String>, row: ButtonRow) {
@@ -77,37 +58,57 @@ class CompromissoFormViewController: FormViewController, CNContactPickerDelegate
     }
     
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
-        print(contact.phoneNumbers)
-        
-        // let numbers = contact.phoneNumbers.first
+ 
         selectedContat = contact.givenName
-        self.form.rowBy(tag: "contatoName")?.title = selectedContat
+        self.form.rowBy(tag: "contatoName")?.title = contact.givenName
         self.form.rowBy(tag: "contatoName")?.hidden = false
         self.form.rowBy(tag: "contatoName")?.evaluateHidden()
-        // self.form.rowBy(tag: "contatoName")?.hidden = false
         self.form.rowBy(tag: "contatoName")?.updateCell()
-        
     }
     
     func contactPickerDidCancel(_ picker: CNContactPickerViewController) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    func save() {
+    func save(cell: ButtonCellOf<String>, row: ButtonRow) {
+        
+        let calendar = Calendar.current
+        let now = Date()
+        
+        var periodo = String("")
+        
+        var primeiroHorario = calendar.date(bySettingHour: 5, minute: 0, second: 0, of: now) as! Date
+        var segundoHorario = calendar.date(bySettingHour: 12, minute: 0, second: 0, of: now) as! Date
+        var terceiroHorario = calendar.date(bySettingHour: 18, minute: 0, second: 0, of: now) as! Date
+        
         let formValues = form.values()
         
-        let titulo = formValues["titulo"] as? String
-        let responsavel = formValues["responsavel"] as? String
-        let data = formValues["data"] as? DateComponents
-        let horario = formValues["horario"] as? Date //alterar para periodo
-        let local = formValues["local"] as? String
-        let notificacao = formValues["lembrar"] as? Bool
+        let titulo = formValues["titulo"] as! String
+        let responsavel = selectedContat as! String
+        let data = formValues["data"] as! Date
+        let horario = formValues["horario"] as! Date//alterar para periodo
+        let local = formValues["local"] as! String
+        let notificacao = formValues["lembrar"] as! Bool
         
-//        Singleton.instance.adiconarCompromisso(titulo: titulo, lembrar: notificacao, local: local, responsavel: )
+        let components = calendar.dateComponents([.day, .month, .year], from: data)
         
+        if (horario >= primeiroHorario && horario < segundoHorario) {
+            periodo = "Manhã"
+        } else if (horario >= segundoHorario && horario < terceiroHorario) {
+            periodo = "Tarde"
+        } else {
+            periodo = "Noite"
+        }
         
-       // Singleton.instance.a
+        print(titulo)
+        print(notificacao)
+        print(local)
+        print(responsavel)
+        print(periodo)
+        print(components)
         
-//        Singleton.instance.adiconarCompromisso(titulo: titulo!, lembrar: notificacao!, local: local!, responsavel: responsavel!, data: data!)
+        Singleton.instance.adiconarCompromisso(titulo: titulo, lembrar: notificacao, local: local, responsavel: responsavel, periodo: periodo, data: components)
     }
 }
+
+
