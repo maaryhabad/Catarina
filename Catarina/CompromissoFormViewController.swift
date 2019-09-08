@@ -107,7 +107,8 @@ class CompromissoFormViewController: FormViewController, CNContactPickerDelegate
         print(periodo)
         print(components)
         
-        Singleton.instance.adiconarCompromisso(titulo: titulo, lembrar: notificacao, local: local, responsavel: responsavel, periodo: periodo, data: components)
+        Singleton.instance.adiconarCompromisso(titulo: titulo, responsavel: responsavel, data: components, periodo: periodo, local: local, lembrar: notificacao)
+
     }
 }
 
