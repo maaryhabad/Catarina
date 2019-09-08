@@ -11,6 +11,22 @@ import UIKit
 import ContactsUI
 
 
+extension UIColor {
+    convenience init(hexString: String, alpha: CGFloat = 1.0) {
+        var hexInt: UInt32 = 0
+        let scanner = Scanner(string: hexString)
+        scanner.charactersToBeSkipped = CharacterSet(charactersIn: "#")
+        scanner.scanHexInt32(&hexInt)
+        
+        let red = CGFloat((hexInt & 0xff0000) >> 16) / 255.0
+        let green = CGFloat((hexInt & 0xff00) >> 8) / 255.0
+        let blue = CGFloat((hexInt & 0xff) >> 0) / 255.0
+        let alpha = alpha
+        
+        self.init(red: red, green: green, blue: blue, alpha: alpha)
+    }
+}
+
 class CompromissoFormViewController: FormViewController, CNContactPickerDelegate {
     
     var selectedContat: String?
@@ -21,34 +37,52 @@ class CompromissoFormViewController: FormViewController, CNContactPickerDelegate
         form +++ Section()
             <<< TextRow("titulo") {
                 $0.title = "Compromisso"
+                $0.cell.backgroundColor = UIColor(hexString: "F2F1F6")
+                $0.cell.textLabel?.font = UIFont(name: "Avenir Next", size: 17)
             }
             <<< DateInlineRow("data") {
                 $0.title = "Data"
+                $0.cell.backgroundColor = UIColor(hexString: "F2F1F6")
+                $0.cell.textLabel?.font = UIFont(name: "Avenir Next", size: 17)
             }
             <<< TimeInlineRow("horario") {
                 $0.title = "Horario"
+                $0.cell.backgroundColor = UIColor(hexString: "F2F1F6")
+                $0.cell.textLabel?.font = UIFont(name: "Avenir Next", size: 17)
             }
             <<< TextRow("local") {
                 $0.title = "Local"
+                $0.cell.backgroundColor = UIColor(hexString: "F2F1F6")
+                $0.cell.textLabel?.font = UIFont(name: "Avenir Next", size: 17)
             }
             <<< SwitchRow("lembrar") {
-                $0.title = "Notificação"
+                $0.title = "Lembrar"
+                $0.cell.backgroundColor = UIColor(hexString: "F2F1F6")
+                $0.cell.textLabel?.font = UIFont(name: "Avenir Next", size: 17)
             }
             
             <<< ButtonRow(){
                 $0.title = "Contatos"
                 $0.onCellSelection(self.contato)
+                $0.cell.backgroundColor = UIColor(hexString: "F2F1F6")
+                $0.cell.textLabel?.font = UIFont(name: "Avenir Next", size: 17)
             }
             <<< LabelRow("contatoName") {
                 $0.title = ""
                 $0.hidden = true
+             $0.cell.backgroundColor = UIColor(hexString: "F2F1F6")
+                $0.cell.textLabel?.font = UIFont(name: "Avenir Next", size: 17)
             }
         
         <<<
             ButtonRow("salvar") {
                 $0.title = "Salvar"
                 $0.onCellSelection(self.save)
+                $0.cell.backgroundColor = UIColor(hexString: "F2F1F6")
+                $0.cell.textLabel?.font = UIFont(name: "Avenir Next", size: 17)
         }
+        
+        self.tableView.separatorStyle = .none
     }
 
     func contato(cell: ButtonCellOf<String>, row: ButtonRow) {
