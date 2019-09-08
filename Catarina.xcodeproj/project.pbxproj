@@ -33,6 +33,7 @@
 		CD994FC023059CF8006E9814 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD994FBE23059CF8006E9814 /* LaunchScreen.storyboard */; };
 		CD994FCB23059CF8006E9814 /* CatarinaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD994FCA23059CF8006E9814 /* CatarinaTests.swift */; };
 		CD994FD623059CF8006E9814 /* CatarinaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD994FD523059CF8006E9814 /* CatarinaUITests.swift */; };
+		CDADBD6A23258E89006B5486 /* appDelegate + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDADBD6923258E89006B5486 /* appDelegate + Extensions.swift */; };
 		CDC2C6F32316BBB2007AC928 /* Compartilhar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC2C6F22316BBB2007AC928 /* Compartilhar.swift */; };
 		E84FDA6923140225009EC0CF /* Compromisso.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84FDA6823140225009EC0CF /* Compromisso.swift */; };
 		E84FDA6B2314028D009EC0CF /* Periodo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84FDA6A2314028D009EC0CF /* Periodo.swift */; };
@@ -98,6 +99,7 @@
 		CD994FD123059CF8006E9814 /* CatarinaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatarinaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD994FD523059CF8006E9814 /* CatarinaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatarinaUITests.swift; sourceTree = "<group>"; };
 		CD994FD723059CF8006E9814 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDADBD6923258E89006B5486 /* appDelegate + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "appDelegate + Extensions.swift"; sourceTree = "<group>"; };
 		CDC2C6F22316BBB2007AC928 /* Compartilhar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compartilhar.swift; sourceTree = "<group>"; };
 		E84FDA6823140225009EC0CF /* Compromisso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compromisso.swift; sourceTree = "<group>"; };
 		E84FDA6A2314028D009EC0CF /* Periodo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Periodo.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				6C90E733231D49330098C420 /* TarefaFormViewController.swift */,
 				6C353309232448FA00B49125 /* TarefaView.swift */,
 				CD994FB423059CF4006E9814 /* ViewController.swift */,
+				CDADBD6923258E89006B5486 /* appDelegate + Extensions.swift */,
 			);
 			path = Catarina;
 			sourceTree = "<group>";
@@ -477,6 +480,7 @@
 				CD44AFA92316A4C400D6E8E3 /* PlaylistViewController.swift in Sources */,
 				6C35330823242B2D00B49125 /* CompromissoView.swift in Sources */,
 				FBE07579230ACB5C0012DDF6 /* AddPopUpViewController.swift in Sources */,
+				CDADBD6A23258E89006B5486 /* appDelegate + Extensions.swift in Sources */,
 				01608E17231D5D990078BD7A /* CellCollectionDays.swift in Sources */,
 				CD994FBB23059CF4006E9814 /* Catarina.xcdatamodeld in Sources */,
 				CD44AFA72316A4C400D6E8E3 /* PlaylistModel.swift in Sources */,
