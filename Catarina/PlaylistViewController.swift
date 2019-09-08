@@ -16,6 +16,9 @@ class PlaylistViewController: UIViewController, UICollectionViewDelegate,  UICol
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let imagem = UIImage(named: "navBar.png")
+        self.navigationController?.navigationBar.setBackgroundImage(imagem, for: .default)
+        
         collection.delegate = self
         collection.dataSource = self
         // Do any additional setup after loading the view.

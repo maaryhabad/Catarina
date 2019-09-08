@@ -8,6 +8,10 @@ class TarefaFormViewController: FormViewController, CNContactPickerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let imagem = UIImage(named: "navBar.png")
+        self.navigationController?.navigationBar.setBackgroundImage(imagem, for: .default)
+        
+        
         form +++ Section()
             <<< PickerInlineRow<String>("titulo") {
                 (row: PickerInlineRow<String>) -> Void in

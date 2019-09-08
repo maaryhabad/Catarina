@@ -24,6 +24,9 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         collectionViewData = Singleton.instance.listaDia
         tableViewData = Singleton.instance.listaDia[0].listaPeriodo
         
+        let imagem = UIImage(named: "navBar.png")
+        self.navigationController?.navigationBar.setBackgroundImage(imagem, for: .default)
+        
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return collectionViewData.count

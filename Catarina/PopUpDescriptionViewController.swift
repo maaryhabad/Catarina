@@ -25,6 +25,9 @@ class PopUpDescriptionViewController: UIViewController {
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
         self.showAnimate()
         
+        let imagem = UIImage(named: "navBar.png")
+        self.navigationController?.navigationBar.setBackgroundImage(imagem, for: .default)
+        
     }
     
 //    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

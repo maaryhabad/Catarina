@@ -17,6 +17,9 @@ class AddPopUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // self.showAnimate()
+        
+        let imagem = UIImage(named: "navBar.png")
+        self.navigationController?.navigationBar.setBackgroundImage(imagem, for: .default)
     }
     
     @IBOutlet weak var blurView: UIView!
