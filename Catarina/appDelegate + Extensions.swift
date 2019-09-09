@@ -30,77 +30,85 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     }
     
     func agendarTarefa (tarefa: Tarefa) {
+        
         let titulo = tarefa.titulo
         let periodo = tarefa.periodo
         
-        let content = UNMutableNotificationContent()
-        let categoryIndetifire = "Delete Notification Type"
+        let hour: Int
+        let minute: Int
         
-        content.title  = titulo
-        content.body = "Oi! Já está na hora de \(titulo), vamos começar?"
-        content.sound = UNNotificationSound.default
-        content.badge = 1
-        content.categoryIdentifier = categoryIndetifire
-        
-        let triggerDaily = Calendar.current.dateComponents([.hour,.minute,.second,], from: periodo)//tem que ser um atributo date
-        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: false)
-        let identifier = "\(titulo)"
-        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
-        
-        notificationCenter.add(request) { (error) in
-            if let error = error {
-                print("Error \(error.localizedDescription)")
-            }
+        if periodo == "manha" {
+            hour = 09
+            minute = 00
+        } else if periodo == "tarde" {
+            hour = 14
+            minute = 00
+        } else {
+            hour = 19
+            minute = 00
         }
         
-        let snoozeAction = UNNotificationAction(identifier: "Snooze", title: "Snooze", options: [])
-        let deleteAction = UNNotificationAction(identifier: "DeleteAction", title: "Delete", options: [.destructive])
-        let category = UNNotificationCategory(identifier: categoryIdentifire,
-                                              actions: [snoozeAction, deleteAction],
-                                              intentIdentifiers: [],
-                                              options: [])
-        notificationCenter.setNotificationCategories([category])
+        let notificationCenter = UNUserNotificationCenter.current()
+        let content = UNMutableNotificationContent()
+        let identifier = "identifier"
         
-    }
-    
-   
+        content.title = titulo
+        content.body = "Já está na hora de \(titulo), vamos?"
+        content.sound = .default
+        
+        // The selected time to notify the user
+        var dateComponents = DateComponents()
+        dateComponents.calendar = Calendar.current
+        dateComponents.hour = hour
+        dateComponents.minute = minute
+        
+        // The time/repeat trigger
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        
+        // Initializing the Notification Request object to add to the Notification Center
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        
+        // Adding the notification to the center
+        notificationCenter.add(request) { (error) in
+            if (error) != nil {
+                print(error!.localizedDescription)
+            }
+        }
+}
+        
+
     
     func  agendarCompromisso (compromisso: Compromisso) {
         let titulo = compromisso.titulo
         let periodo = compromisso.periodo
         
+        print(compromisso.periodo)
+        
+        let notificationCenter = UNUserNotificationCenter.current()
         let content = UNMutableNotificationContent()
-        let categoryIndetifire = "Delete Notification Type"
+        let identifier = "identifier"
         
-        content.title  = titulo
-        content.body = "Oi! Já está na hora do compromisso: \(titulo), vamos?"
-        content.sound = UNNotificationSound.default
-        content.badge = 1
-        content.categoryIdentifier = categoryIndetifire
-
-    }
-    
-    func scheduleNotification(remedio: HomeRemedio, notificationDate: Date, iteration: Int) {
+        content.title = titulo
+        content.body = "Já está na hora de \(titulo), vamos?"
+        content.sound = .default
         
+        // The selected time to notify the user
+        var dateComponents = DateComponents()
+        dateComponents.calendar = Calendar.current
+//        dateComponents = compromisso.periodo
         
-        let triggerDaily = Calendar.current.dateComponents([.hour,.minute,.second,], from: notificationDate)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDaily, repeats: false)
-        let identifier = "\(remedio.nome) \(iteration)"
+        // The time/repeat trigger
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        
+        // Initializing the Notification Request object to add to the Notification Center
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         
+        // Adding the notification to the center
         notificationCenter.add(request) { (error) in
-            if let error = error {
-                print("Error \(error.localizedDescription)")
+            if (error) != nil {
+                print(error!.localizedDescription)
             }
         }
-        
-        let snoozeAction = UNNotificationAction(identifier: "Snooze", title: "Snooze", options: [])
-        let deleteAction = UNNotificationAction(identifier: "DeleteAction", title: "Delete", options: [.destructive])
-        let category = UNNotificationCategory(identifier: categoryIdentifire,
-                                              actions: [snoozeAction, deleteAction],
-                                              intentIdentifiers: [],
-                                              options: [])
-        notificationCenter.setNotificationCategories([category])
-        //        print(categoryIdentifire + String(iteration))
     }
+    
 }
