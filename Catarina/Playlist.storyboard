@@ -83,15 +83,18 @@
             </objects>
             <point key="canvasLocation" x="2714.4927536231885" y="-298.66071428571428"/>
         </scene>
-        <!--Item-->
+        <!--Playlist-->
         <scene sceneID="v6U-rJ-4qm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gJA-OM-FFA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" selectedImage="Icon" id="GzR-th-eul"/>
+                    <tabBarItem key="tabBarItem" title="Playlist" selectedImage="Icon" id="GzR-th-eul"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tcG-ne-H9N">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -106,4 +109,5 @@
     <resources>
         <image name="Icon" width="36" height="32"/>
     </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

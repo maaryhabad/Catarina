@@ -12,6 +12,7 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
+    
     }
     
     override func viewDidLoad() {
@@ -24,6 +25,9 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         collectionViewData = Singleton.instance.listaDia
         tableViewData = Singleton.instance.listaDia[0].listaPeriodo
         self.tableView.separatorStyle = .none
+        
+        let imagem = UIImage(named: "navBar.png")
+        self.navigationController?.navigationBar.setBackgroundImage(imagem, for: .default)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -32,10 +36,13 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         print("chamou")
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellDias", for: indexPath) as! CellCollectionDays
+        cell.numDia.textColor = UIColor.init(displayP3Red: 241, green: 241, blue: 246, alpha: 1)
+        cell.strDia.textColor = UIColor.init(displayP3Red: 241, green: 241, blue: 246, alpha: 1)
         
         if(cont == 0){
             cell.imgDay.image = UIImage(named: "RectangleCollection")
         }
+        
         cell.numDia.text = "\(((collectionViewData[indexPath.row].data.day) as! Int))"
         let dateDate = Calendar(identifier: .gregorian).date(from: collectionViewData[indexPath.row].data)!
         let numDia  =  Calendar.current.component(.weekday, from: dateDate)
@@ -70,9 +77,13 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = collectionView.cellForItem(at: indexPath) as! CellCollectionDays
         if(cell.imgDay.image == UIImage(named: "RectangleCollection")){
             cell.imgDay.image = UIImage(named: "Collection Copy 3")
+            cell.numDia.textColor = UIColor.init(displayP3Red: 241, green: 241, blue: 246, alpha: 1)
+            cell.strDia.textColor = UIColor.init(displayP3Red: 241, green: 241, blue: 246, alpha: 1)
         }
         else{
              cell.imgDay.image = UIImage(named: "RectangleCollection")
+            cell.numDia.textColor = UIColor.white
+            cell.strDia.textColor = UIColor.white
         }
         Singleton.instance.diaSelecionado = indexPath.row
         tableViewData = collectionViewData[indexPath.row].listaPeriodo
