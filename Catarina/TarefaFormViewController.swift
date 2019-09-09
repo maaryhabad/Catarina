@@ -97,11 +97,26 @@ class TarefaFormViewController: FormViewController, CNContactPickerDelegate {
         print(formValues)
         print(selectedContact)
         
-        let titulo = formValues["titulo"] as! String
-        let periodo = formValues["periodo"] as! String
-        let responsavel = selectedContact as! String
-        let lembrar = formValues["lembrar"] as! Bool
-        if let repete = formValues["repete"] as? Set<String> {
+        var titulo = formValues["titulo"] as? String
+        var periodo = formValues["periodo"] as? String
+        var responsavel = selectedContact as? String
+        var lembrar = formValues["lembrar"] as? Bool
+        if(titulo == nil){
+            titulo = "Tarefa sem titulo"
+        }
+        if(periodo == nil){
+            periodo = "Manhã"
+        }
+        if(responsavel == nil){
+            responsavel = "Mãe"
+        }
+        if(lembrar == nil){
+            lembrar = false
+        }
+        if var repete = formValues["repete"] as? Set<String> {
+            if(repete == nil){
+                repete = ["Toda segunda-feira"]
+            }
             for i in repete {
                 //print(i)
                 if i == "Toda segunda-feira" {
@@ -128,7 +143,7 @@ class TarefaFormViewController: FormViewController, CNContactPickerDelegate {
             }
         }
         
-        Singleton.instance.adiconarTarefas(titulo: titulo, periodo: periodo, nResponsavel: responsavel, segunda: dias[0], terca: dias[1], quarta: dias[2], quinta: dias[3], sexta: dias[4], sabado: dias[5], domingo: dias[6])
+        Singleton.instance.adiconarTarefas(titulo: titulo!, periodo: periodo!, nResponsavel: responsavel!, segunda: dias[0], terca: dias[1], quarta: dias[2], quinta: dias[3], sexta: dias[4], sabado: dias[5], domingo: dias[6])
         
         }
 }

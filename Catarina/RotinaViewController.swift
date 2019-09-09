@@ -7,7 +7,7 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var tableViewData = [Periodo]()
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var collectionView: UICollectionView!
-    
+    var cont = 0
     var collectionViewData = [Dia]()
     
     override func viewWillAppear(_ animated: Bool) {
@@ -23,16 +23,19 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         var date = DateComponents()
         collectionViewData = Singleton.instance.listaDia
         tableViewData = Singleton.instance.listaDia[0].listaPeriodo
-        
         self.tableView.separatorStyle = .none
-        
     }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return collectionViewData.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        print("chamou")
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellDias", for: indexPath) as! CellCollectionDays
         
+        if(cont == 0){
+            cell.imgDay.image = UIImage(named: "RectangleCollection")
+        }
         cell.numDia.text = "\(((collectionViewData[indexPath.row].data.day) as! Int))"
         let dateDate = Calendar(identifier: .gregorian).date(from: collectionViewData[indexPath.row].data)!
         let numDia  =  Calendar.current.component(.weekday, from: dateDate)
@@ -55,17 +58,28 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         default:
             ""
         }
+        cont += 1
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as! CellCollectionDays
+        for cell in collectionView.visibleCells as! [CellCollectionDays] {
+           cell.imgDay.image = UIImage(named: "Collection Copy 3")
+        }
         
-        cell.imgDay.image = UIImage(named: "RectangleCollection")
+        
+        let cell = collectionView.cellForItem(at: indexPath) as! CellCollectionDays
+        if(cell.imgDay.image == UIImage(named: "RectangleCollection")){
+            cell.imgDay.image = UIImage(named: "Collection Copy 3")
+        }
+        else{
+             cell.imgDay.image = UIImage(named: "RectangleCollection")
+        }
         Singleton.instance.diaSelecionado = indexPath.row
         tableViewData = collectionViewData[indexPath.row].listaPeriodo
         tableView.reloadData()
 
     }
+   
     @IBAction func addButton(_ sender: Any) {
         let addOverPopUp = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addPopUpID") as! AddPopUpViewController
         if(!Singleton.instance.popUpAberto){
@@ -81,6 +95,7 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return tableViewData.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         if tableViewData[section].aberto ==  true {
             return tableViewData[section].vetorTarefas.count + 1
         }
@@ -98,12 +113,12 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
 //            cell.lblTitulo.font = UIFont(name: "Avenir", size: CGFloat(exactly: 22) ?? 22)
             
             if tableViewData[indexPath.section].titulo == "Manhã" {
-                cell.imgPeriodo.image = UIImage(named: "iconeManha")
+                cell.imgPeriodo.image = UIImage(named: "iconeManhaON")
                 
             } else if tableViewData[indexPath.section].titulo == "Tarde" {
-                cell.imgPeriodo.image = UIImage(named: "iconeTarde")
+                cell.imgPeriodo.image = UIImage(named: "iconeTardeON")
             } else {
-                cell.imgPeriodo.image = UIImage(named: "iconeNoite")
+                cell.imgPeriodo.image = UIImage(named: "iconeNoiteON")
             }
             
             return cell
@@ -138,24 +153,11 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
         }
         else {
-            let addOverPopUp = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "popUpDescription") as! PopUpDescriptionViewController
-            if(!Singleton.instance.popUpDescricaoAberto){
-                Singleton.instance.popUpDescricaoAberto = true
-                self.addChild(addOverPopUp)
-                addOverPopUp.view.frame = self.view.frame
-                addOverPopUp.lblTtitulo.text = self.tableViewData[indexPath.section].vetorTarefas[indexPath.row-1].titulo
-                if !self.tableViewData[indexPath.section].vetorTarefas[indexPath.row-1].isTarefa{
-                    addOverPopUp.lblHora.isHidden = false
-                    addOverPopUp.lblHora.text = "Algum horário"
-                    addOverPopUp.lblLocal.isHidden = false
-                    addOverPopUp.lblLocal.text = "Algum Local"
-                }
-                
-                
-                self.view.addSubview(addOverPopUp.view)
-                addOverPopUp.didMove(toParent: self)
-            }
+            if let vc = storyboard?.instantiateViewController(withIdentifier: "popUpDescription") as? PopUpDescriptionViewController{
+            
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
+}
 }
