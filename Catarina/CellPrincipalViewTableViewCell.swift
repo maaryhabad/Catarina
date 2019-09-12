@@ -15,7 +15,7 @@ class CellPrincipalViewTableViewCell: UITableViewCell {
     @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var lblConcluido: UILabel!
     @IBOutlet weak var imgPeriodo: UIImageView!
-    
+    @IBOutlet weak var imgExpand: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6XB-At-BjJ">
-                                <rect key="frame" x="41.5" y="116.5" width="331" height="717"/>
+                                <rect key="frame" x="41.5" y="70" width="331" height="717"/>
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.94509803921568625" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ssO-Jh-n0S">
                                     <size key="itemSize" width="143" height="192"/>
@@ -74,7 +74,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3iW-YX-CYP"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Playlist" image="Icon" id="GzR-th-eul"/>
                     <navigationItem key="navigationItem" title="Playlist" id="v49-eP-Gn9"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collection" destination="6XB-At-BjJ" id="jFl-R9-ih3"/>
                     </connections>
@@ -83,15 +85,17 @@
             </objects>
             <point key="canvasLocation" x="2714.4927536231885" y="-298.66071428571428"/>
         </scene>
-        <!--Playlist-->
+        <!--Navigation Controller-->
         <scene sceneID="v6U-rJ-4qm">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gJA-OM-FFA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Playlist" selectedImage="Icon" id="GzR-th-eul"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="gJA-OM-FFA" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tcG-ne-H9N">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
@@ -109,5 +113,4 @@
     <resources>
         <image name="Icon" width="36" height="32"/>
     </resources>
-    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
