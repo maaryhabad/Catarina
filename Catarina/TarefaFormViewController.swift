@@ -3,7 +3,7 @@ import ContactsUI
 
 class TarefaFormViewController: FormViewController, CNContactPickerDelegate {
    
-    var selectedContact: String?
+    var selectedContact: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,11 +15,8 @@ class TarefaFormViewController: FormViewController, CNContactPickerDelegate {
         form +++ Section()
             <<< PickerInlineRow<String>("titulo") {
                 (row: PickerInlineRow<String>) -> Void in
-                row.options = ["Banho", "Amamentação", "Sono", "Alimentação", "Estímulo", "Outro"]
+                row.options = ["Banho", "Amamentação", "Sono", "Alimentação", "Estímulo"]
                 row.title = "Tarefa"
-                if (row.value == "Outro") {
-                    // open another text row. maybe by calling a function that creates this row?
-                }
                 row.cell.backgroundColor = UIColor(hexString: "F2F1F6")
                 row.cell.textLabel?.font = UIFont(name: "Avenir Next", size: 17)
                 
@@ -28,6 +25,9 @@ class TarefaFormViewController: FormViewController, CNContactPickerDelegate {
                 $0.options = ["Manhã", "Tarde", "Noite"]
                 $0.cell.backgroundColor = UIColor(hexString: "F2F1F6")
                 $0.cell.textLabel?.font = UIFont(name: "Avenir Next", size: 17)
+        }.cellUpdate {
+                cell, row in
+                cell.textLabel?.textColor = UIColor.blue
             }
             
             <<< MultipleSelectorRow<String>("repete") {
@@ -49,7 +49,11 @@ class TarefaFormViewController: FormViewController, CNContactPickerDelegate {
                 $0.onCellSelection(self.contato)
                 $0.cell.backgroundColor = UIColor(hexString: "F2F1F6")
                 $0.cell.textLabel?.font = UIFont(name: "Avenir Next", size: 17)
-                }
+        }.cellUpdate {
+                cell, row in
+                cell.textLabel?.textColor = UIColor.blue
+            }
+            
             <<< LabelRow("contatoName") {
                 $0.title = ""
                 $0.hidden = true
@@ -67,6 +71,9 @@ class TarefaFormViewController: FormViewController, CNContactPickerDelegate {
                 $0.onCellSelection(self.save)
                 $0.cell.backgroundColor = UIColor(hexString: "F2F1F6")
                 $0.cell.textLabel?.font = UIFont(name: "Avenir Next", size: 17)
+        }.cellUpdate {
+            cell, row in
+            cell.textLabel?.textColor = UIColor.blue
         }
          self.tableView.separatorStyle = .none
     }
@@ -148,51 +155,4 @@ class TarefaFormViewController: FormViewController, CNContactPickerDelegate {
         }
 }
 
-
-//        let titulo = formValues["titulo"]
-//        let responsavel = (self.form.values()["contatoName"]!! as! [String?]).compactMap { $0 }
-//        let periodo = (self.form.values()["periodo"]!! as! [String?]).compactMap { $0 }
-//
-//        var dias: [Bool] = [Bool](repeating: false, count: 7)
-// let responsavel = form.rowBy(tag: "contatoName")?.title ?? ""
-// let titulo = form.rowBy(tag: "titulo")?.title as? String
-
-//var titulo = (formValues["titulo"] as? String)
-// var periodo: String = (formValues["periodo"] as? String)
-//        var lembrar = formValues["lembrar"] as? Bool
-//        if let repete = formValues["repete"] as? Set<String> {
-//            for i in repete {
-//                //print(i)
-//                if i == "Toda segunda-feira" {
-//                    dias[0] = true
-//                }
-//                if i == "Toda terça-feira" {
-//                    dias[1] = true
-//                }
-//                if i == "Toda quarta-feira" {
-//                    dias[2] = true
-//                }
-//                if i == "Toda quinta-feira" {
-//                    dias[3] = true
-//                }
-//                if i == "Toda sexta-feira" {
-//                    dias[4] = true
-//                }
-//                if i == "Todo sábado" {
-//                    dias[5] = true
-//                }
-//                if i == "Todo domingo" {
-//                    dias[6] = true
-//                }
-//            }
-//        }
-
-// Singleton.instance.adiconarTarefas(titulo: titulo[0], periodo: periodo[0], nResponsavel: responsavel[0], segunda: dias[0], terca: dias[1], quarta: dias[2], quinta: dias[3], sexta: dias[4], sabado: dias[5], domingo: dias[6])
-// print(titulo)
-//print(periodo)
-//print(responsavel)
-//        //Singleton.instance.adiconarTarefas(titulo: titulo!, periodo: periodo!, nResponsavel: responsavel!, segunda: true, terca: true, quarta: true, quinta: true, sexta: true, sabado: true, domingo: true)
-
-// colocar a funçao de compartilhamento aqui!!!
-//lembrar : boolean
 

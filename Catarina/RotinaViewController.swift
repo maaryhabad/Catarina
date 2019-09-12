@@ -36,8 +36,6 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         print("chamou")
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellDias", for: indexPath) as! CellCollectionDays
-        cell.numDia.textColor = UIColor.init(displayP3Red: 241, green: 241, blue: 246, alpha: 1)
-        cell.strDia.textColor = UIColor.init(displayP3Red: 241, green: 241, blue: 246, alpha: 1)
         
         if(cont == 0){
             cell.imgDay.image = UIImage(named: "RectangleCollection")
@@ -71,16 +69,16 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         for cell in collectionView.visibleCells as! [CellCollectionDays] {
            cell.imgDay.image = UIImage(named: "Collection Copy 3")
+            cell.numDia.textColor = UIColor.darkGray
+            cell.strDia.textColor = UIColor.darkGray
         }
         
         
         let cell = collectionView.cellForItem(at: indexPath) as! CellCollectionDays
-        if(cell.imgDay.image == UIImage(named: "RectangleCollection")){
+        if (cell.imgDay.image == UIImage(named: "RectangleCollection")){
             cell.imgDay.image = UIImage(named: "Collection Copy 3")
-            cell.numDia.textColor = UIColor.init(displayP3Red: 241, green: 241, blue: 246, alpha: 1)
-            cell.strDia.textColor = UIColor.init(displayP3Red: 241, green: 241, blue: 246, alpha: 1)
         }
-        else{
+        else {
              cell.imgDay.image = UIImage(named: "RectangleCollection")
             cell.numDia.textColor = UIColor.white
             cell.strDia.textColor = UIColor.white
@@ -111,31 +109,28 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
             return tableViewData[section].vetorTarefas.count + 1
         }
         else {
-            return 1//tableViewData[section].vetorTarefas.count
+            return 1
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // FECHADOOOOOOOOOOO Manha | Tarde | Noite
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CellPrincipalViewTableViewCell
             cell.lblTitulo.text = tableViewData[indexPath.section].titulo
-            
-//            cell.lblTitulo.font = UIFont(name: "Avenir", size: CGFloat(exactly: 22) ?? 22)
+
             
             if tableViewData[indexPath.section].titulo == "Manhã" {
-                cell.imgPeriodo.image = UIImage(named: "iconeManhaON")
+                cell.imgPeriodo.image = UIImage(named: "iconeManha")
                 
             } else if tableViewData[indexPath.section].titulo == "Tarde" {
-                cell.imgPeriodo.image = UIImage(named: "iconeTardeON")
+                cell.imgPeriodo.image = UIImage(named: "iconeTarde")
             } else {
-                cell.imgPeriodo.image = UIImage(named: "iconeNoiteON")
+                cell.imgPeriodo.image = UIImage(named: "iconeNoite")
             }
             
             return cell
         }
         else {
-            // ABERTOOOOOOOOO Lista de tarefas e compromissos
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellInfo", for: indexPath) as! CellInfoTableViewCell
             
             if (tableViewData[indexPath.section].vetorTarefas[indexPath.row-1].isTarefa){
@@ -147,20 +142,26 @@ class RotinaViewController: UIViewController, UITableViewDelegate, UITableViewDa
             return cell
         }
     }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        view.tintColor = .white
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CellPrincipalViewTableViewCell
+        
         if indexPath.row == 0 {
             if tableViewData[indexPath.section].aberto == true{
-                //print("ta aberto")
                 tableViewData[indexPath.section].aberto = false
+                cell.imgExpand.image = UIImage(named: "setaPicker")
                 let sections = IndexSet.init(integer: indexPath.section)
-                tableView.reloadSections(sections, with: .none )//anim
-                
+                tableView.reloadSections(sections, with: .none )
             }
             else {
-                //print("ta fechado")
                 tableViewData[indexPath.section].aberto  = true
+                cell.imgExpand.image = UIImage(named: "setaPicker")
                 let sections = IndexSet.init(integer: indexPath.section)
-                tableView.reloadSections(sections, with: .none)//anim
+                tableView.reloadSections(sections, with: .none)
             }
         }
         else {

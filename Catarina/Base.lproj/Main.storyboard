@@ -131,6 +131,10 @@
                                                             <color key="textColor" red="0.40784313725490196" green="0.44705882352941173" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="setaPicker" translatesAutoresizingMaskIntoConstraints="NO" id="H9o-Qe-s47">
+                                                            <rect key="frame" x="354" y="73" width="32" height="17"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.94901960784313721" green="0.94509803921568625" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
@@ -147,6 +151,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.94901960780000005" green="0.94509803920000002" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
+                                            <outlet property="imgExpand" destination="H9o-Qe-s47" id="xLD-16-hug"/>
                                             <outlet property="imgPeriodo" destination="mcI-Oa-8Lm" id="Eb8-GT-U3h"/>
                                             <outlet property="lblConcluido" destination="tNt-RU-ID3" id="gzr-UM-4nK"/>
                                             <outlet property="lblDate" destination="KSW-bM-sEC" id="XQ7-e4-vcT"/>
@@ -169,6 +174,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Rotina" selectedImage="Tab 1" id="Xmm-Hn-Itg"/>
                     <navigationItem key="navigationItem" title="Rotina" id="Ecm-wt-l4P">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Muh-jT-IT1">
                             <connections>
@@ -176,6 +182,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="qeE-gJ-s0W" id="zcF-ab-LRv"/>
                         <outlet property="tableView" destination="1RA-qN-dIK" id="mgf-yU-4Ks"/>
@@ -197,7 +204,7 @@
                                 <rect key="frame" x="0.0" y="1.5" width="414" height="448"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ilustraAtividade" translatesAutoresizingMaskIntoConstraints="NO" id="gSX-3R-GfA">
-                                        <rect key="frame" x="52" y="67" width="310.50000000000011" height="448"/>
+                                        <rect key="frame" x="52" y="67" width="310.5" height="448"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94509803920000002" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -242,6 +249,7 @@
                         <viewLayoutGuide key="safeArea" id="2Bs-YM-JnB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Nova atividade" id="UwN-a9-FmM"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="btnAddCompromisso" destination="QGD-Q8-Ylr" id="y1m-Nf-DnG"/>
                         <outlet property="btnAddTarefa" destination="CEl-oI-vxK" id="6d7-37-niq"/>
@@ -326,7 +334,7 @@
         <scene sceneID="pvq-cT-1bh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mML-Ut-fyl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Rotina" selectedImage="Tab 1" id="rZv-Xy-bRo"/>
+                    <tabBarItem key="tabBarItem" title="Rotina" image="Tab 1" selectedImage="Tab 1" id="rZv-Xy-bRo"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JdJ-eH-uC6">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -371,7 +379,7 @@
         <scene sceneID="Sdc-qN-Fgc">
             <objects>
                 <viewControllerPlaceholder storyboardName="Playlist" id="Iyt-mJ-vA2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Playlist" selectedImage="Icon" id="RNO-JK-JIb"/>
+                    <tabBarItem key="tabBarItem" title="Playlist" image="Icon" id="RNO-JK-JIb"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GMP-NO-zRE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -512,6 +520,6 @@
         <image name="ilustraAtividade" width="394" height="267"/>
         <image name="ilustraCompromisso" width="329" height="274"/>
         <image name="ilustraTarefa" width="329" height="285"/>
+        <image name="setaPicker" width="14" height="10"/>
     </resources>
-    <color key="tintColor" red="0.94901960784313721" green="0.94509803921568625" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
 </document>

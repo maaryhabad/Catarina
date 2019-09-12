@@ -69,6 +69,9 @@ class CompromissoFormViewController: FormViewController, CNContactPickerDelegate
                 $0.onCellSelection(self.contato)
                 $0.cell.backgroundColor = UIColor(hexString: "F2F1F6")
                 $0.cell.textLabel?.font = UIFont(name: "Avenir Next", size: 17)
+                }.cellUpdate {
+                    cell, row in
+                    cell.textLabel?.textColor = UIColor.blue
             }
             <<< LabelRow("contatoName") {
                 $0.title = ""
@@ -83,6 +86,9 @@ class CompromissoFormViewController: FormViewController, CNContactPickerDelegate
                 $0.onCellSelection(self.save)
                 $0.cell.backgroundColor = UIColor(hexString: "F2F1F6")
                 $0.cell.textLabel?.font = UIFont(name: "Avenir Next", size: 17)
+                }.cellUpdate {
+                    cell, row in
+                    cell.textLabel?.textColor = UIColor.blue
         }
         
         self.tableView.separatorStyle = .none
@@ -136,14 +142,6 @@ class CompromissoFormViewController: FormViewController, CNContactPickerDelegate
         } else {
             periodo = "Noite"
         }
-        
-        print(titulo)
-        print(notificacao)
-        print(local)
-        print(responsavel)
-        print(periodo)
-        print(components)
-        
         Singleton.instance.adiconarCompromisso(titulo: titulo, responsavel: responsavel, data: components, periodo: periodo, local: local, lembrar: notificacao)
 
     }
